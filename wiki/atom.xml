@@ -5,7 +5,7 @@
   <link href="/wiki/atom.xml" rel="self"/>
   
   <link href="http://librix.github.io/wiki/"/>
-  <updated>2017-05-23T10:36:37.789Z</updated>
+  <updated>2017-05-24T08:18:31.202Z</updated>
   <id>http://librix.github.io/wiki/</id>
   
   <author>
@@ -16,59 +16,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hhhhhh</title>
-    <link href="http://librix.github.io/wiki/wiki/2/"/>
-    <id>http://librix.github.io/wiki/wiki/2/</id>
+    <title>2017</title>
+    <link href="http://librix.github.io/wiki/wiki/2017-05-24/"/>
+    <id>http://librix.github.io/wiki/wiki/2017-05-24/</id>
     <published>2017-05-23T10:27:52.165Z</published>
-    <updated>2017-05-23T10:36:37.789Z</updated>
+    <updated>2017-05-24T08:18:31.202Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" rel="external nofollow noopener noreferrer" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" rel="external nofollow noopener noreferrer" target="_blank">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" rel="external nofollow noopener noreferrer" target="_blank">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" rel="external nofollow noopener noreferrer" target="_blank">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" rel="external nofollow noopener noreferrer" target="_blank">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" rel="external nofollow noopener noreferrer" target="_blank">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" rel="external nofollow noopener noreferrer" target="_blank">Deployment</a></p>
+    <content type="html"><![CDATA[<p> 哈奥</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hexo&lt;/a&gt;! This is your very first post.
+      &lt;p&gt; 哈奥&lt;/p&gt;
+
     
     </summary>
     
       <category term="每日新闻" scheme="http://librix.github.io/wiki/categories/%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB/"/>
     
+      <category term="5月" scheme="http://librix.github.io/wiki/categories/%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB/5%E6%9C%88/"/>
+    
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
+    <title>Librix 的 wiki 世界</title>
     <link href="http://librix.github.io/wiki/wiki/hello-world/"/>
     <id>http://librix.github.io/wiki/wiki/hello-world/</id>
     <published>2017-05-23T09:40:10.013Z</published>
-    <updated>2017-05-23T10:27:48.756Z</updated>
+    <updated>2017-05-24T08:20:40.170Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" rel="external nofollow noopener noreferrer" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" rel="external nofollow noopener noreferrer" target="_blank">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" rel="external nofollow noopener noreferrer" target="_blank">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" rel="external nofollow noopener noreferrer" target="_blank">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" rel="external nofollow noopener noreferrer" target="_blank">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" rel="external nofollow noopener noreferrer" target="_blank">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" rel="external nofollow noopener noreferrer" target="_blank">Deployment</a></p>
+    <content type="html"><![CDATA[<p>太懒了。。。所所以简略的写一下。</p>
+<h1 id="为什么要写wiki"><a href="#为什么要写wiki" class="headerlink" title="为什么要写wiki"></a>为什么要写wiki</h1><p>整理第一，知识整理更为重要。不要这个wiki的主要作用是整理新闻的。</p>
+<h1 id="没了"><a href="#没了" class="headerlink" title="没了"></a>没了</h1><p>是的。。就是这么简略。</p>
+<h1 id="wiki的形成思路"><a href="#wiki的形成思路" class="headerlink" title="wiki的形成思路"></a>wiki的形成思路</h1><p>首先，wiki的 Hexo 模板与整个blog的模板是不同的。所以面临的第一个问题是怎么将 Hexo blog 部署到 git repo 的子目录中。我使用的方法是使用脚本本地复制到总 blog 的根目录下。</p>
+<p>第二个问题是：执行 Windows 批处理命令后步骤中的命令不运行。</p>
+<p>这是因为一个步骤中的所有命令都放在将由服务器运行的 Windows 批处理文件中。如果该步骤命令包含对批处理文件的引用，那么在该批处理文件运行后该步骤将退出。在批处理文件引用后的步骤命令不会运行。暂时使用<code>call xx.bat</code>来解决。</p>
+<p>第一个bat：找到主博客，生成静态文件。<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function">d:</span></div><div class="line"><span class="title">cd</span> <span class="title">blog</span></div><div class="line"><span class="title">hexo</span> <span class="title">g</span></div></pre></td></tr></table></figure></p>
+<p>第二个bat：找到wiki的博客目录，生成静态目录。<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> wikiaa</div><div class="line">hexo g</div></pre></td></tr></table></figure></p>
+<p>第三个bat：拷贝wiki博客的所有生成文件到主博客的wiki目录下<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">xcopy</span> D:\blog\wikiaa\public D:\blog\public\wiki /e</div><div class="line"><span class="built_in">cd</span> ..\</div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
+<p>第四个命名为<code>blog.bat</code>：为了方便执行，前三个bat放在D盘，最后一个放在<code>C:\widows</code>目录下，这样以后直接打开CMD，输入<code>blog</code>就能直接上传到博客了。<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">call</span> D:\blog1.bat</div><div class="line"><span class="keyword">call</span> D:\blog2.bat</div><div class="line"><span class="keyword">call</span> D:\blog3.bat</div><div class="line">@<span class="built_in">echo</span> "success!"</div></pre></td></tr></table></figure></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="https://www.ibm.com/support/knowledgecenter/zh/SSB2MV_7.1.2/com.ibm.rational.buildforge.doc/topics/steps_troubleshoot_win_batch_files.html" rel="external nofollow noopener noreferrer" target="_blank">执行 Windows 批处理命令后步骤中的命令不运行</a></li>
+<li><a href="http://judastree.cn/2015/09/29/%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%9C%A8github%20pages%20%E7%9A%84%E5%AD%90%E7%9B%AE%E5%BD%95/" rel="external nofollow noopener noreferrer" target="_blank">将hexo部署在github子目录</a></li>
+</ol>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hexo&lt;/a&gt;! This is your very first post.
+      &lt;p&gt;太懒了。。。所所以简略的写一下。&lt;/p&gt;
+&lt;h1 id=&quot;为什么要写wiki&quot;&gt;&lt;a href=&quot;#为什么要写wiki&quot; class=&quot;headerlink&quot; title=&quot;为什么要写wiki&quot;&gt;&lt;/a&gt;为什么要写wiki&lt;/h1&gt;&lt;p&gt;整理第一，知识整理更为重要。不要这个
     
     </summary>
     
-      <category term="jishu/haha" scheme="http://librix.github.io/wiki/categories/jishu-haha/"/>
+      <category term="wiki基础" scheme="http://librix.github.io/wiki/categories/wiki%E5%9F%BA%E7%A1%80/"/>
     
     
   </entry>
