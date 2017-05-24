@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Librix的知识世界</title>
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/wiki/atom.xml" rel="self"/>
   
   <link href="http://librix.github.io/wiki/"/>
   <updated>2017-05-23T10:36:37.789Z</updated>
