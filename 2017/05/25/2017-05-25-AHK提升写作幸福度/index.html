@@ -94,7 +94,7 @@
 <meta property="og:url" content="http://librix.github.io/2017/05/25/2017-05-25-AHK提升写作幸福度/index.html">
 <meta property="og:site_name" content="Librix的知识世界">
 <meta property="og:description" content="前言在电脑上上写作，最佳的码字环境是程序员的编程利器。毕竟和程序员们比起来，专业的写作人员面对电脑的时间实在是太短了。Mardown 的格式也为文科写作排版降低了一个门槛。 但是，在使用 MarkDown 写作的时候，经常会遇到一些很繁琐的配套的格式。比如插入图片!()[]等等。这时候，其实可以使用 AHK 自动化脚本来帮助我们减轻一些工作压力。 AHK 的最基础的功能是字符替换，所以，AHK 也">
-<meta property="og:updated_time" content="2017-05-25T14:52:10.011Z">
+<meta property="og:updated_time" content="2017-05-26T14:53:50.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AHK - 提升写作幸福度">
 <meta name="twitter:description" content="前言在电脑上上写作，最佳的码字环境是程序员的编程利器。毕竟和程序员们比起来，专业的写作人员面对电脑的时间实在是太短了。Mardown 的格式也为文科写作排版降低了一个门槛。 但是，在使用 MarkDown 写作的时候，经常会遇到一些很繁琐的配套的格式。比如插入图片!()[]等等。这时候，其实可以使用 AHK 自动化脚本来帮助我们减轻一些工作压力。 AHK 的最基础的功能是字符替换，所以，AHK 也">
@@ -362,6 +362,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/05/25/2017-05-25-AHK提升写作幸福度/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -369,6 +379,24 @@
 
           
 
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
           
 
           
@@ -392,13 +420,16 @@
 <h1 id="自动生成日期格式"><a href="#自动生成日期格式" class="headerlink" title="自动生成日期格式"></a>自动生成日期格式</h1><p>首先，打开 atom 编辑器。面对空空如野的编辑器，使用<code>ctrl+N</code>新建一个空文档。空文档，首先要写的就是 yaml 头。这也是我们面临的第一个问题，怎么写 yaml 头。在写 yaml 头文件的时候，格式一般是下面的这个样子。我们实现的功能，最后也是这个样式的。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: AHK - 提升写作幸福度</div><div class="line">author: E.A.</div><div class="line">date: 2017-05-25</div><div class="line">categories: uncategories</div><div class="line"><span class="section">tags: 随笔</span></div><div class="line">---</div></pre></td></tr></table></figure></p>
 <p>那么怎么使用 AHK 实现呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">!F2::</div><div class="line">FormatTime, CurrentDateTime,, yyyy-MM-dd</div><div class="line">SendInput,---`r&#123;Backspace&#125;title: title`rauthor: E.A.`rdate: %CurrentDateTime%`rcategories: uncategories`rtags: 随笔`r---`r`n</div><div class="line">return</div></pre></td></tr></table></figure></p>
 <p><code>!F2</code>表示在按下<code>F2</code>键的时候，起输出的作用。<code>\</code>r<code>表示换行，</code>`n<code>表示回车。</code>{Backspace}<code>是退格键。</code>return`表示函数结束。</p>
-<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><p>写着写着，需要插入图片辅助自己的论证，怎么办呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">!F1::</div><div class="line">MyVar1 = ![](%clipboard%)</div><div class="line">SendInput &#123;Raw&#125;%MyVar1%</div><div class="line">SendInput &#123;Home&#125;&#123;Right 2&#125;</div><div class="line">return</div></pre></td></tr></table></figure></p>
-<p>因为所有的电脑上的文章都是发送到网上的，所以图片要先使用<code>七牛工具</code>上传到网络，获取网络地址，然后复制图片地址，按下<code>ALt+F1</code>，就成功在文章里面插入图片了。</p>
+<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><p>写着写着，需要插入图片辅助自己的论证，怎么办呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">qiniu-image-tool.ahk</div><div class="line">a small tool that help you upload local image or screenshot to qiniu cloud and get the markdown-style</div><div class="line">url in clipboard as well as your current editor. actually you can upload any file by this script.</div><div class="line">github: https://github.com/jiwenxing/qiniu-image-tool</div><div class="line">blog: http://jverson.com/2016/08/30/autohotkey-markdown-uploadImage/</div><div class="line">CHANGE LOG</div><div class="line"> 3.0 -- 张立根修改</div><div class="line"> 2.0 -- 2017/04 -- screenshot &amp; image copy from web both supported</div><div class="line"> 1.0 -- 2016/08 -- basic function realized, only local files supported.</div><div class="line">*/</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">^!V::</div><div class="line"></div><div class="line">	;;;; config start, you need to replace them by yours</div><div class="line">	ACCESS_KEY =</div><div class="line">	SECRET_KEY =</div><div class="line">	BUCKET_NAME =   ;qiniu bucket name</div><div class="line">	BUCKET_DOMAIN = ;qiniu domain for the image</div><div class="line">	WORKING_DIR = E:\GIT\qiniu-image-tool-win\  ;directory that you put the qshell.exe</div><div class="line">	;;;; config end</div><div class="line"></div><div class="line">    ;;;; optional config start</div><div class="line">    UP_HOST = http://up.qiniu.com</div><div class="line">    DEBUG_MODE := false</div><div class="line">    ;;;; optional config end</div><div class="line"></div><div class="line">	;;;; datetime+randomNum as file name prefix</div><div class="line">	Random, rand, 1, 1000</div><div class="line">	filePrefix =  %A_yyyy%%A_MM%%A_DD%%A_Hour%%A_Min%_%rand%</div><div class="line">    isDebug = /c</div><div class="line">    if DEBUG_MODE</div><div class="line">        isDebug = /k</div><div class="line"></div><div class="line">	;MsgBox %clipboard%</div><div class="line"></div><div class="line"></div><div class="line">	if(clipboard)&#123;</div><div class="line">	    ;MsgBox, probably file in clipboard</div><div class="line">		;;;;; get file type by extension</div><div class="line">		clipboardStr = %clipboard%</div><div class="line">		StringSplit, ColorArray, clipboardStr, `.  ;split by &apos;.&apos;</div><div class="line">		maxIndex := ColorArray0  ;get array lenth</div><div class="line">		str = ColorArray%maxIndex%</div><div class="line">		fileType := ColorArray%maxIndex%  ;get last element of array, namely file type or file extension</div><div class="line">	    filename = %filePrefix%.%fileType%</div><div class="line">		; To run multiple commands consecutively, use &quot;&amp;&amp;&quot; between each</div><div class="line">		SetWorkingDir, %WORKING_DIR%</div><div class="line">		RunWait, %comspec% %isDebug% qshell account %ACCESS_KEY% %SECRET_KEY% &amp;&amp; qshell fput %BUCKET_NAME% %filename% %clipboard% %UP_HOST%</div><div class="line"></div><div class="line">	&#125;else&#123;</div><div class="line">	    ;MsgBox, probably binary image in clipboard</div><div class="line">		filename = %filePrefix%.png</div><div class="line">		fileType := &quot;png&quot;</div><div class="line">		pathAndName = %WORKING_DIR%%filename%</div><div class="line">		;MsgBox, %pathAndName%</div><div class="line">		SetWorkingDir, %WORKING_DIR%</div><div class="line">		; here, thanks for https://github.com/octan3/img-clipboard-dump</div><div class="line">		RunWait, %comspec% %isDebug% powershell set-executionpolicy remotesigned &amp;&amp; powershell -sta -f dump-clipboard-png.ps1 %pathAndName%  &amp;&amp; qshell account %ACCESS_KEY% %SECRET_KEY% &amp;&amp; qshell fput %BUCKET_NAME% %filename% %pathAndName% %UP_HOST% &amp;&amp; del %pathAndName%</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	;;;; paste markdown format url to current editor</div><div class="line">	resourceUrl = %BUCKET_DOMAIN%%filename%</div><div class="line">	;MsgBox, %resourceUrl%</div><div class="line">	; if image file</div><div class="line">	if(fileType=&quot;jpg&quot; or fileType=&quot;png&quot; or fileType=&quot;gif&quot; or fileType=&quot;bmp&quot; or fileType=&quot;jpeg&quot;)&#123;</div><div class="line">		resourceUrl = ![](%resourceUrl%)</div><div class="line">	&#125;</div><div class="line">	;MsgBox, %resourceUrl%</div><div class="line">	clipboard =  ; Empty the clipboard.</div><div class="line">	clipboard = %resourceUrl%</div><div class="line"></div><div class="line">	;MsgBox %clipboard%</div><div class="line">	Send ^v</div><div class="line"></div><div class="line">return</div></pre></td></tr></table></figure></p>
+<p>以上函数直接在按下<code>ctrl+alt+v</code>时候上传到七牛并返回链接。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">!F1::</div><div class="line">MyVar1 = ![](%clipboard%)</div><div class="line">SendInput &#123;Raw&#125;%MyVar1%</div><div class="line">SendInput &#123;Home&#125;&#123;Right 2&#125;</div><div class="line">return</div></pre></td></tr></table></figure>
+<p>因为所有的电脑上的文章都是发送到网上的，所以图片要先使用<code>七牛工具qshell</code>上传到网络，获取网络地址，然后复制图片地址，按下<code>ALt+F1</code>，就成功在文章里面插入图片了。</p>
 <h1 id="插入日期"><a href="#插入日期" class="headerlink" title="插入日期"></a>插入日期</h1><p>atom 可以设置自动保存的，即便没有保存关闭也是没关系的。那么当我们写完文档，想要保存的时候呢，我有一个特殊的需要。要使用日期。</p>
 <p>在命名文件的时候，我喜欢使用类似<code>2017-05-25-filename.md</code>的方式命名。这样一目了然。前面是日期格式，后面是文件名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">F1::</div><div class="line">FormatTime, CurrentDateTime,, yyyy-MM-dd</div><div class="line">SendInput &#123;Raw&#125;%CurrentDateTime%-%clipboard%</div><div class="line">return</div></pre></td></tr></table></figure></p>
 <p>这样，只要在保存前复制一下日期，然后按下<code>F1</code>，电脑就会自己打出<code>2017-05-25-filename</code>的字眼。是不是很<s>搞笑</s>高效呢？</p>
 <h1 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h1><p>因为使用 RStudio 的原因，打算命令按下<code>ctrl+alt+I</code>键的时候实现插入代码块的功能。那么怎么使用 AHK 实现呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">^!I::</div><div class="line">SendInput ``````&#123;Enter&#125;&#123;Enter&#125;``````&#123;Up 2&#125;r</div><div class="line">return</div></pre></td></tr></table></figure></p>
 <p>一句一句来。<code>^!I</code>表示同时按下<code>ctrl+alt+I</code>键，<code>::</code>表示运行以下命令，后面接一个回车哦。使用<code>SendInput 字符串</code>函数输出字符串。</p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>对于 AHK 的基础用法，可以查看软件中文帮助。</p>
 
       
     </div>
@@ -508,6 +539,8 @@
           
   <div class="comments" id="comments">
     
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
   </div>
 
 
@@ -564,10 +597,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -575,10 +608,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -631,7 +664,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自动生成日期格式"><span class="nav-number">2.</span> <span class="nav-text">自动生成日期格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入图片"><span class="nav-number">3.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入日期"><span class="nav-number">4.</span> <span class="nav-text">插入日期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入代码"><span class="nav-number">5.</span> <span class="nav-text">插入代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自动生成日期格式"><span class="nav-text">自动生成日期格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入图片"><span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入日期"><span class="nav-text">插入日期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入代码"><span class="nav-text">插入代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束语"><span class="nav-text">结束语</span></a></li></ol></div>
             
 
           </div>
@@ -785,18 +818,21 @@
 
 
   
-
-
-
-
-
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "6ee20d1a990d49cd88893949d6d10eef",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
   
 
 
 
 
-
-  
 
 
 
