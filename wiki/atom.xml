@@ -5,7 +5,7 @@
   <link href="/wiki/atom.xml" rel="self"/>
   
   <link href="http://librix.github.io/wiki/"/>
-  <updated>2017-05-28T07:58:39.527Z</updated>
+  <updated>2017-05-29T08:15:35.586Z</updated>
   <id>http://librix.github.io/wiki/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>电子射线管</title>
+    <link href="http://librix.github.io/wiki/wiki/2017-05-29-%E7%94%B5%E5%AD%90%E5%B0%84%E7%BA%BF%E7%AE%A1/"/>
+    <id>http://librix.github.io/wiki/wiki/2017-05-29-电子射线管/</id>
+    <published>2017-05-28T16:00:00.000Z</published>
+    <updated>2017-05-29T08:15:35.586Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="土木工程知识体系" scheme="http://librix.github.io/wiki/categories/%E5%9C%9F%E6%9C%A8%E5%B7%A5%E7%A8%8B%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
+    
+      <category term="大学物理" scheme="http://librix.github.io/wiki/categories/%E5%9C%9F%E6%9C%A8%E5%B7%A5%E7%A8%8B%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/"/>
+    
+    
+      <category term="物理" scheme="http://librix.github.io/wiki/tags/%E7%89%A9%E7%90%86/"/>
+    
+      <category term="仪器使用" scheme="http://librix.github.io/wiki/tags/%E4%BB%AA%E5%99%A8%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>各种软件安装技能</title>
@@ -57,7 +79,7 @@
     <link href="http://librix.github.io/wiki/wiki/2017-05-27-%E3%80%8A%E8%B4%B9%E6%9B%BC%E7%89%A9%E7%90%86%E5%AD%A6%E8%AE%B2%E4%B9%89%E3%80%8B%E7%AC%94%E8%AE%B0/"/>
     <id>http://librix.github.io/wiki/wiki/2017-05-27-《费曼物理学讲义》笔记/</id>
     <published>2017-05-26T16:00:00.000Z</published>
-    <updated>2017-05-29T03:46:57.992Z</updated>
+    <updated>2017-05-29T11:42:43.192Z</updated>
     
     <content type="html"><![CDATA[<p>这应该是我看过的的最难读、最有趣的书。难读可能是因为我有阅读障碍，还可能因为公式写的太过简略。而有趣是说如果忽略公式的意义（由其他书补充）而仅领略思想，收获颇丰。</p>
 <p>控制自己应当得多什么，而不是贪婪的不知所谓。</p>
@@ -218,6 +240,86 @@
 <li>过程无能量损失（不可能的，实际要消耗动力）</li>
 </ul>
 <p>根据经验，摩擦可以近似使用$f=\mu N$（取决于法向力），对于大致判断某些实际或工程学情况中所需的力的大小是一个很好的经验法则。</p>
+<p>高速状态下摩擦明显减常常是由于振动引起的。</p>
+<p>半经验公式还没有被我们完全理解。</p>
+<p>分子力：原子之间的力，摩擦的根本原因。<br><img src="http://ww1.sinaimg.cn/large/ac3323ebly1fg29owzfskj20f00cd3z7.jpg" alt="经验理解的分子力"><br>可以根据<em>分子力在距离大时吸引，距离小时排斥</em>形成固体。<br>某距离d处，分子力=0，意味着所有力被平衡；如果分子相对于距离d移动距离很小，近似为一条直线：胡克定律（弹性定律）。胡克定律表示当物体形变（小变形有效）时，物体试图恢复原状的力与形变的大小成正比。为了使胡克定律成立，力的数值要有一定限制，取决于材料。</p>
+<p>基本力：我们称之为基本力是由于他们遵循的定律从根本上说是简单的。</p>
+<p>电力：任何两个带电荷的物体之间存在电力。</p>
+<ul>
+<li>$\epsilon_0 = 8.85e-19 库伦^2/牛顿*米^2$</li>
+<li>$1/4\pi\episilon =8.99e9 牛顿*米^2/库伦^2$</li>
+<li>力可以写成两部分：<ul>
+<li>力等于电量$q_2$乘以一个量$\mathbf{E}$，不管有没有$q_2$，$\mathbf{E}$都应当存在</li>
+<li>$\mathbf{E}$是$q_1$产生的状况</li>
+<li>$\mathbf{F}$是$q_2$对$\mathbf{E}$的响应</li>
+</ul>
+</li>
+<li>$\mathbf{E}$是电场，电场表示为 $\mathbf{E}=q_1\hat{r}/r^3$<ul>
+<li>因此，得到$\mathbf{F}$与$\mathbf{E}$的关系</li>
+</ul>
+</li>
+<li>要点：分析分成两部分：一部分产生了一个场；另一部分，某物受到了场的作用</li>
+</ul>
+<p>万有引力可以做类似处理。</p>
+<p>力的定律如此之复杂，结果表明场具有几乎与产生他们的物体无关的实在性。<br>力越来越复杂，场变得越来越真实。分离技巧的人为性也就越来越少。</p>
+<p>用场来分析力时，我们需要用到场的两种定律：</p>
+<ul>
+<li>对场的响应，给出运动方程</li>
+<li>场的强度以及它是如何产生的规律用公式表示出来，场方程。<ul>
+<li>总电场 = 第n个源产生的电场的矢量和 （适用于万有引力），所谓场的叠加原理</li>
+</ul>
+</li>
+</ul>
+<p>磁力，与电力联系紧密，用场分析。磁力与电力之间的定性关系可以使用<strong>电子射线管</strong>的实验来说明。</p>
+<p>为了解释<strong>电子射线管</strong>的实验现象，我们认为磁铁两极之间存在磁场。场具有方向性，总是由指定的一级出发指向另一极。</p>
+<p>彼此以任意方式运动的带电物体之间力的正确定律是复杂的。如果场是已知时力的完整定律。</p>
+<ul>
+<li>作用在物体上的力取决于它的运动</li>
+<li>如果物体静止，作用在其上的力与电荷量成正比，比例系数是所谓的电场</li>
+<li>如果物体运动，我们发现修正项，新的“一份”力严格线性的取决于速度，并与$mathbf{v}$和$mathbf{B}$磁感应强度矢量正交</li>
+<li>$F_x = q(E_x+v_yB_z+v_zB_y)</li>
+</ul>
+<p>赝力</p>
+<ul>
+<li>坐标系不同的修正：$m\frac{d^2x}{dt^2}=F_x$ 修正为 $m\frac{d^2x^{‘}}{dt^2}=F_x^{‘}-ma$</li>
+<li>离心力</li>
+<li>实验：</li>
+<li>特征：与质量成正比</li>
+<li>爱因斯坦：加速度产生万有引力的赝力，赝力与万有引力是不可区分的。<ul>
+<li>把重力看做赝力，似乎没有问题，但是地球另一端呢？</li>
+<li>爱因斯坦发现，每次只有在一个点上才可以把重力同时看成赝力，根据这个考虑，他认为世界的几何性要比普通欧几里得几何复杂。</li>
+<li>如果我们将几何形状充分畸变，万有引力以某种方式与赝力联系起来是可能的。</li>
+</ul>
+</li>
+</ul>
+<p>核力：</p>
+<ul>
+<li>存在于原子核内部</li>
+<li>核分析不再使用力来思考，任何能够写出的公式都是忽略许多复杂情况的相当粗糙的近似<ul>
+<li>比如，$F=(1/r^2)exp(-r/r_0)$，$r_0$ 的数量级是$10^{-13}cm$</li>
+</ul>
+</li>
+</ul>
+<h1 id="功与势能"><a href="#功与势能" class="headerlink" title="功与势能"></a>功与势能</h1><p>$$T+U=恒量$$</p>
+<p>由于动能比其他形式的能量重要，这些方程中一些重要的项目使用了各种名称，如动能、功率$\mathbf{F}\mathbf{v}$。</p>
+<p>动能变化率=功率</p>
+<p>能量守恒</p>
+<ul>
+<li>我们能否在引力场中获得永久的运动？不能。（既然没有摩擦，那么物体不能以较大或是较小的速度回到原点）</li>
+<li>引力做功真的为0吗？是的。$W_{ij}=\inf_i^j \mathbf{F}d\mathbf{s} = -GMm(\frac{1}{r_j}-\frac{1}{r<em>i})$，闭合曲线中$W = \sum W</em>{ij}$。环绕任何闭路运行一周所做的功是零。</li>
+</ul>
+<p>行星绕太阳运行（没有其他绕行物体，不存在其他力）:轨道每一点上，任何一点的这个值$v^2-\frac{某些常数}{半径}$是相等的。</p>
+<ul>
+<li>行星靠近太阳会运行快，快多少？<ul>
+<li>假设行星不绕太阳转了。改变速度方向为径向，大小不变，运动到感兴趣的轨道，速度与真实运动是一样的。</li>
+<li>无论运动是真实的、未受扰动的，或者用凹槽、无摩擦约束来改变运动方向。行星达到同一点动能是相同的。</li>
+</ul>
+</li>
+</ul>
+<p>弹簧上的小球的能量</p>
+<p>能量加和为恒量$\sum_i \frac{1}{2}m_iv<em>i^2+\sum</em>{ij对}-\frac{Gm_im_j}{r_ij}=const$</p>
+<p>质量分布</p>
+<p>$dC_x=Gdm \hat{\mathbf{r}}/r^3$</p>
 ]]></content>
     
     <summary type="html">
