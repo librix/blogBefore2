@@ -79,7 +79,7 @@
     <link href="http://librix.github.io/wiki/wiki/2017-05-27-%E3%80%8A%E8%B4%B9%E6%9B%BC%E7%89%A9%E7%90%86%E5%AD%A6%E8%AE%B2%E4%B9%89%E3%80%8B%E7%AC%94%E8%AE%B0/"/>
     <id>http://librix.github.io/wiki/wiki/2017-05-27-《费曼物理学讲义》笔记/</id>
     <published>2017-05-26T16:00:00.000Z</published>
-    <updated>2017-05-29T11:42:43.192Z</updated>
+    <updated>2017-05-30T05:12:58.808Z</updated>
     
     <content type="html"><![CDATA[<p>这应该是我看过的的最难读、最有趣的书。难读可能是因为我有阅读障碍，还可能因为公式写的太过简略。而有趣是说如果忽略公式的意义（由其他书补充）而仅领略思想，收获颇丰。</p>
 <p>控制自己应当得多什么，而不是贪婪的不知所谓。</p>
@@ -318,8 +318,101 @@
 </ul>
 <p>弹簧上的小球的能量</p>
 <p>能量加和为恒量$\sum_i \frac{1}{2}m_iv<em>i^2+\sum</em>{ij对}-\frac{Gm_im_j}{r_ij}=const$</p>
-<p>质量分布</p>
-<p>$dC_x=Gdm \hat{\mathbf{r}}/r^3$</p>
+<p>质量分布<br><img src="http://ww1.sinaimg.cn/large/ac3323ebly1fg2h78h0v7j20ro0hu75j.jpg" alt="质量分布的处理过程"></p>
+<p>注意，电力中，G相当于$\frac{1}{4\pi\varepsilon_0}$</p>
+<p>地球对其表面或外面的力与地球质量全部集中在质心的效果是一样的。<br><img src="http://ww1.sinaimg.cn/large/ac3323ebly1fg2j0atpo1j20v40kw3zk.jpg" alt="第一步"><br><img src="http://ww1.sinaimg.cn/large/ac3323ebly1fg2jc0q9dcj21660fq40w.jpg" alt="后续步骤"><br>实际上，就是一个根据图片阐述$dm-&gt;dW-&gt;W$的过程，其中重点是$dm$的表达式以及积分被积数$dx-&gt;dr$的确定。</p>
+<p>如果点在球体内部，结果与P的位置（位置怎么描述？半径）无关。<br><img src="http://ww1.sinaimg.cn/large/ac3323ebly1fg2jzgfjfaj211d0hnta9.jpg" alt=""></p>
+<p>以上概念和结论是物理学的核心。我们对其做更加深入地考察，重点在集中讨论概念本身的问题。</p>
+<p>学习任何一个和数学有关的技术性课题中，人们总是面临着弄懂记住大量事实和概念的任务。</p>
+<p>人们容易弄混<strong>证明本身</strong>和他们建立起来的<strong>关系</strong>。</p>
+<ul>
+<li>学习的要点是记住 事实和概念的关系</li>
+<li>不是证明本身</li>
+<li>要记住“能够证明”是正确的。</li>
+<li>记得“某某”是正确的，在说明需要证明的时候，自己想出一种证明方法。</li>
+</ul>
+<p>证明：</p>
+<ul>
+<li>几乎所有情况，特殊证明都是为了很快的将它写在黑板或者是在纸上，并尽量清楚。</li>
+<li>看上去很简洁的某个证明，作者可能花费数个小时，企图使用不同的方式计算这个问题，直到他找到了一种最简单的做法。<br>-如果证明中包含了<strong>数学过程</strong>或<strong>特殊技巧</strong>，我们需要注意的是<strong>数学概念</strong>，而不是技巧。</li>
+</ul>
+<p>概念：<br>力所做的功</p>
+<ul>
+<li>全世界的无产阶级联合起来！worker</li>
+<li>力做的功！work</li>
+<li>力对位移的线积分：如果力使物体在某方向发生位移，只在位移方向的分力做了功<ul>
+<li>力是恒量，位移是有限位移，直接相乘</li>
+<li>位移有分量，则$F_xs_x+F_ys_y+F_zs_z$，恰好是标量乘积</li>
+<li>力不是恒量，则要分成不同的$\Delta s$，一部分一部分，加起来，这就是线积分的含义。</li>
+</ul>
+</li>
+<li>物理上的功一般不是以下含义<ul>
+<li>一个人提着物体，可能会出汗，颤抖，喘气，是生理学上的做功</li>
+<li>站的时候平滑肌会卡住</li>
+</ul>
+</li>
+<li>为什么要计算功？<ul>
+<li>因为计算功对我们有意义。</li>
+<li>作用的功恰好等于动能变化</li>
+<li>即，做功会获得速度，$\Delta(v^2)$。</li>
+</ul>
+</li>
+</ul>
+<p>无摩擦约束运动：<br>1、弦的张力<br><img src="http://ww1.sinaimg.cn/large/ac3323ebgy1fg2n3lda54j20c60gxwei.jpg" alt=""><br>2、轨道反力（无摩擦）</p>
+<p>固定的无摩擦约束运动：约束力不做功，因为约束力垂直于运动方向。</p>
+<ul>
+<li>一个物体在重力作用下延光滑面运动是十分复杂的，但是我们依然可以只根据重力来计算做功。这看起来很奇怪，但是约束力做功为0，没有办法╮(╯_╰)╭，按道理应该使用合力做功的。</li>
+</ul>
+<p>保守力</p>
+<ul>
+<li>计算一个力使物体运动做多少功，一般依赖于曲径</li>
+<li>但特殊情况，它与曲径无关，我们说这个力是保守力</li>
+<li>保守是一种力的性质，和政治无关。</li>
+</ul>
+<p>从1到P所做的功是从P到1做的功的负数，假设P不动，现在计算1到2的功，就是1到P，P到2的功。P不动，1到P，P到2的功取决于2的位置，位置函数为$-U(\overline{r})$，称U为势能。<br>如果改变P的位置为Q点，势能函数只改变一个常数，因为能量守恒只与能量变化有关，所以增加常数与守恒无关。</p>
+<p>1、力做的功=质点动能变化<br>2、数学上，保守力做功 = 势能函数$U$的变化的负值。<br>推论：$T+U=const$</p>
+<p>然后可以讨论某些场合下的势能公式：</p>
+<ul>
+<li>均匀重力场 ：$U=mgz$</li>
+<li>弹簧从平衡点压缩到距离x所需的能量 $U=\frac{1}{2}kx^2$</li>
+<li>相距为r的两个质点：$U(r)=-GMm/r^2$</li>
+<li>相距为r的两个电荷：$U(r)=q_1q_2/(4\pi\varepsilon_0r)$</li>
+</ul>
+<p>应用：火箭离开地球，发射速度要有多大？<br>（动能加势能为恒量;假设最后火箭0速度勉强飘逸，势能为GMm除以无穷大，右边式子每一项都是0.）</p>
+<p>势能特征</p>
+<ul>
+<li>假设得到$U(r)$势能曲线图<ul>
+<li>因为量子力学不使用力来研究问题，而使用能量来研究。（因为速度和力都消失了，但能量还存在）使得力的图像变得少起来，能量图像更自然。</li>
+</ul>
+</li>
+<li>势能最小点d<ul>
+<li>从d开始移动一段小距离，做功基本为0，势能变化基本为0.因为曲线底部势能变化非常小。</li>
+<li>d点不存在力，所以是平衡点。</li>
+<li>d是平衡点的另一种看法：无论从哪一边离开d点都要做功。<ul>
+<li>比如，氧分子处于“冷”态。如果对它加热，原子振动，彼此分开，分开消耗的能量等于r=d到无穷远的势能差。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>非保守力：不存在。</p>
+<ul>
+<li>牛顿认为非保守力是可以存在的，比如摩擦力，但是摩擦力是保守力是从现代观点说的。</li>
+</ul>
+<p>势与场有联系的问题：</p>
+<ul>
+<li>力 = m * 场</li>
+<li>势 = 力 <em> ds = m （场）</em> ds = m * $\Psi$</li>
+<li>$\Psi$ 势函数</li>
+<li>$\inf \mathbf{C}d\mathbf{s} = -\Psi$ 就像 $\inf \mathbf{F}d\mathbf{s}=-U$</li>
+<li>$U=-\inf \mathbf{F}d\mathbf{s}=-m \inf \mathbf{C}d\mathbf{s} = m\Psi$</li>
+<li>重力势能变化 <ul>
+<li>r = 无穷， 0</li>
+<li>1/r 变化</li>
+<li>球壳内部 常数<br>-</li>
+</ul>
+</li>
+</ul>
 ]]></content>
     
     <summary type="html">
@@ -442,59 +535,6 @@
   </entry>
   
   <entry>
-    <title>感悟语录</title>
-    <link href="http://librix.github.io/wiki/wiki/2017-05-25-%E8%AF%AD%E5%BD%95%E6%90%9C%E9%9B%86-%E6%84%9F%E6%82%9F/"/>
-    <id>http://librix.github.io/wiki/wiki/2017-05-25-语录搜集-感悟/</id>
-    <published>2017-05-24T16:00:00.000Z</published>
-    <updated>2017-05-27T04:45:20.470Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="人生"><a href="#人生" class="headerlink" title="人生"></a>人生</h1><p>后来当知，看似热闹的觥筹交错，大多都不是真亲近。<br>一杯茶，寥寥数语，会心一笑，才是真朋友。<br>后来才知，大凡三言两语就热情洋溢，似以你为至交的人，都会很快离散不见。<br>静水流深，这句话当适用于任何情义。<br>——《 不畏将来 不念过去》</p>
-<p>人生有两种境界：一是痛而不言，二是笑而不语。</p>
-<p>做为一个知名人士，高手一般是：别人恋恋不舍，自己去意已决。</p>
-<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>以自己的兴趣作为主攻方向。然后把工作仅仅当作是谋生手段。</p>
-<p>足够的热情，足够的动力，足够的耐心，足够的持久性。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;人生&quot;&gt;&lt;a href=&quot;#人生&quot; class=&quot;headerlink&quot; title=&quot;人生&quot;&gt;&lt;/a&gt;人生&lt;/h1&gt;&lt;p&gt;后来当知，看似热闹的觥筹交错，大多都不是真亲近。&lt;br&gt;一杯茶，寥寥数语，会心一笑，才是真朋友。&lt;br&gt;后来才知，大凡三言两语就热情洋溢，似
-    
-    </summary>
-    
-      <category term="语录收集" scheme="http://librix.github.io/wiki/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/"/>
-    
-      <category term="感悟" scheme="http://librix.github.io/wiki/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/%E6%84%9F%E6%82%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>未解决的物理问题</title>
-    <link href="http://librix.github.io/wiki/wiki/2017-05-25-%E8%AF%AD%E5%BD%95%E6%90%9C%E9%9B%86-%E6%9C%AA%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://librix.github.io/wiki/wiki/2017-05-25-语录搜集-未解决的问题/</id>
-    <published>2017-05-24T16:00:00.000Z</published>
-    <updated>2017-05-25T15:04:55.403Z</updated>
-    
-    <content type="html"><![CDATA[<p>1、费曼在物理学讲义里面说，芝诺悖论的错误在于时间不可无限制的分割，那么怎么证明呢？</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;1、费曼在物理学讲义里面说，芝诺悖论的错误在于时间不可无限制的分割，那么怎么证明呢？&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="语录收集" scheme="http://librix.github.io/wiki/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/"/>
-    
-      <category term="未解问题" scheme="http://librix.github.io/wiki/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/%E6%9C%AA%E8%A7%A3%E9%97%AE%E9%A2%98/"/>
-    
-    
-      <category term="随笔" scheme="http://librix.github.io/wiki/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
     <title>【一周语录】0525-0528逻辑反转的笑话</title>
     <link href="http://librix.github.io/wiki/wiki/2017-05-25-%E5%B9%BD%E9%BB%98%E4%B8%8E%E7%AC%91%E8%AF%9D/"/>
     <id>http://librix.github.io/wiki/wiki/2017-05-25-幽默与笑话/</id>
@@ -545,6 +585,59 @@
     
     
       <category term="笑话 文字" scheme="http://librix.github.io/wiki/tags/%E7%AC%91%E8%AF%9D-%E6%96%87%E5%AD%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>感悟语录</title>
+    <link href="http://librix.github.io/wiki/wiki/2017-05-25-%E8%AF%AD%E5%BD%95%E6%90%9C%E9%9B%86-%E6%84%9F%E6%82%9F/"/>
+    <id>http://librix.github.io/wiki/wiki/2017-05-25-语录搜集-感悟/</id>
+    <published>2017-05-24T16:00:00.000Z</published>
+    <updated>2017-05-27T04:45:20.470Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="人生"><a href="#人生" class="headerlink" title="人生"></a>人生</h1><p>后来当知，看似热闹的觥筹交错，大多都不是真亲近。<br>一杯茶，寥寥数语，会心一笑，才是真朋友。<br>后来才知，大凡三言两语就热情洋溢，似以你为至交的人，都会很快离散不见。<br>静水流深，这句话当适用于任何情义。<br>——《 不畏将来 不念过去》</p>
+<p>人生有两种境界：一是痛而不言，二是笑而不语。</p>
+<p>做为一个知名人士，高手一般是：别人恋恋不舍，自己去意已决。</p>
+<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>以自己的兴趣作为主攻方向。然后把工作仅仅当作是谋生手段。</p>
+<p>足够的热情，足够的动力，足够的耐心，足够的持久性。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;人生&quot;&gt;&lt;a href=&quot;#人生&quot; class=&quot;headerlink&quot; title=&quot;人生&quot;&gt;&lt;/a&gt;人生&lt;/h1&gt;&lt;p&gt;后来当知，看似热闹的觥筹交错，大多都不是真亲近。&lt;br&gt;一杯茶，寥寥数语，会心一笑，才是真朋友。&lt;br&gt;后来才知，大凡三言两语就热情洋溢，似
+    
+    </summary>
+    
+      <category term="语录收集" scheme="http://librix.github.io/wiki/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/"/>
+    
+      <category term="感悟" scheme="http://librix.github.io/wiki/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/%E6%84%9F%E6%82%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>未解决的物理问题</title>
+    <link href="http://librix.github.io/wiki/wiki/2017-05-25-%E8%AF%AD%E5%BD%95%E6%90%9C%E9%9B%86-%E6%9C%AA%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://librix.github.io/wiki/wiki/2017-05-25-语录搜集-未解决的问题/</id>
+    <published>2017-05-24T16:00:00.000Z</published>
+    <updated>2017-05-26T14:54:08.685Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、费曼在物理学讲义里面说，芝诺悖论的错误在于时间不可无限制的分割，那么怎么证明呢？</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1、费曼在物理学讲义里面说，芝诺悖论的错误在于时间不可无限制的分割，那么怎么证明呢？&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="语录收集" scheme="http://librix.github.io/wiki/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/"/>
+    
+      <category term="未解问题" scheme="http://librix.github.io/wiki/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/%E6%9C%AA%E8%A7%A3%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="随笔" scheme="http://librix.github.io/wiki/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
