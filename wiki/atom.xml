@@ -386,7 +386,7 @@
     <link href="http://librix.github.io/wiki/wiki/2017-05-27-%E3%80%8A%E8%B4%B9%E6%9B%BC%E7%89%A9%E7%90%86%E5%AD%A6%E8%AE%B2%E4%B9%89%E3%80%8B%E7%AC%94%E8%AE%B0/"/>
     <id>http://librix.github.io/wiki/wiki/2017-05-27-《费曼物理学讲义》笔记/</id>
     <published>2017-05-26T16:00:00.000Z</published>
-    <updated>2017-06-01T04:11:18.368Z</updated>
+    <updated>2017-06-02T03:35:56.078Z</updated>
     
     <content type="html"><![CDATA[<p>这应该是我看过的的最难读、最有趣的书。难读可能是因为我有阅读障碍，还可能因为公式写的太过简略。而有趣是说如果忽略公式的意义（由其他书补充）而仅领略思想，收获颇丰。</p>
 <p>控制自己应当得多什么，而不是贪婪的不知所谓。</p>
@@ -706,14 +706,15 @@
 <ul>
 <li>牛顿认为非保守力是可以存在的，比如摩擦力，但是摩擦力是保守力是从现代观点说的。</li>
 </ul>
-<p>势与场有联系的问题：</p>
+<p>感觉写的有些跑偏了，太注重细节，效率降低。</p>
+<p>势与场有联系的问题：<br>我们场的存在的角度去分析力，那么可不可用类似的方法去处理势能呢？毕竟他们之间是有联系的，所以我们得到了<strong>势函数</strong>。</p>
 <ul>
 <li>力 = m * 场</li>
 <li>势 = 力 <em> ds = m （场）</em> ds = m * $\Psi$</li>
 <li>$\Psi$ 势函数</li>
 <li>$\inf \mathbf{C}d\mathbf{s} = -\Psi$ 就像 $\inf \mathbf{F}d\mathbf{s}=-U$</li>
 <li>$U=-\inf \mathbf{F}d\mathbf{s}=-m \inf \mathbf{C}d\mathbf{s} = m\Psi$</li>
-<li>重力势能变化</li>
+<li>重力势能变化<br>从势能求力或场的线索：$F_x=\frac{\partial U}{\partial x}$。</li>
 </ul>
 ]]></content>
     
