@@ -650,7 +650,7 @@
     <link href="http://librix.github.io/ziyuan/ziyuan/2017-05-29-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E9%99%90%E9%80%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
     <id>http://librix.github.io/ziyuan/ziyuan/2017-05-29-百度网盘限速解决方法/</id>
     <published>2017-05-28T16:00:00.000Z</published>
-    <updated>2017-05-29T03:20:38.190Z</updated>
+    <updated>2017-06-11T02:46:23.295Z</updated>
     
     <content type="html"><![CDATA[<h1 id="百度网盘下载助手脚本"><a href="#百度网盘下载助手脚本" class="headerlink" title="百度网盘下载助手脚本"></a>百度网盘下载助手脚本</h1><p>最早是网友“有一份田”制作的脚本百度下载助手，可以显示直链，绕过大文件云盘下载，还可以调用迅雷或者IDM加速下载。</p>
 <p>需要注意的是，在调用迅雷或IDM下载时，需要点击“显示直链”，然后再点击下载，支持在百度网盘 个人网盘管理页面 和 分享页面 的下载。Firefox下可以安装拓展“xthunder”来调用下载软件，加速效果几近满速。</p>
@@ -668,6 +668,7 @@
 <p>绑定成功后，直接点击首页的“DISK”按钮，进入到你的百度云网盘。</p>
 <p>找到你要下载的文件，点击向下的按钮，获得下载链接。点击任意下载链接，即可开始满速下载。</p>
 <p>Tips：把链接复制出来放到IDM下载，速度会更快哦！</p>
+<h1 id="直链解析法"><a href="#直链解析法" class="headerlink" title="直链解析法"></a>直链解析法</h1><p>有次数限制，可买会员。。<br>打开<a href="https://www.nekopanc.cc/" rel="external nofollow noopener noreferrer" target="_blank">网站</a>就好。</p>
 ]]></content>
     
     <summary type="html">
