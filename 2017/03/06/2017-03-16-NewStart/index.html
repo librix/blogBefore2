@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://librix.github.io/2017/03/06/2017-03-16-NewStart/index.html">
 <meta property="og:site_name" content="Librix的知识世界">
 <meta property="og:description" content="I have want to write for few days a ago, and now, fanally finish to reboot my computer. Reinstall system onekey and wePE  After reinstall system typeWords : rime Internet:chrome, socksCap, SSR safe:36">
-<meta property="og:updated_time" content="2017-06-12T15:06:23.968Z">
+<meta property="og:updated_time" content="2017-06-22T07:11:55.448Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HOW DO I USE MY COMPUTER">
 <meta name="twitter:description" content="I have want to write for few days a ago, and now, fanally finish to reboot my computer. Reinstall system onekey and wePE  After reinstall system typeWords : rime Internet:chrome, socksCap, SSR safe:36">
@@ -470,6 +470,7 @@
 <li>OCR and ebookCreaker : abbyy finereader 12, printer, phone camera</li>
 <li>VirtualBox, VMware Workstation</li>
 </ul>
+<h2 id="Lightly-softwere"><a href="#Lightly-softwere" class="headerlink" title="Lightly softwere"></a>Lightly softwere</h2><p>download video from web pages:<a href="http://www.eagleget.com/cn/" target="_blank" rel="external">eagleGet</a> <a href="http://www.jianshu.com/p/a3f8df948395" target="_blank" rel="external">you-get</a></p>
 <h1 id="How-to-use-atom"><a href="#How-to-use-atom" class="headerlink" title="How to use atom:"></a>How to use atom:</h1><p>markdown, python, and web pages design<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"># apm install markdown-preview-plus</div><div class="line">apm install language-markdown</div><div class="line"># apm install markdown-scroll-sync</div><div class="line">apm install markdown-table-formatter</div><div class="line">apm install atom-latex</div><div class="line">apm install language-latex</div><div class="line"></div><div class="line">apm install platformio-ide-terminal</div><div class="line">apm install gpp-compiler</div><div class="line">apm install script</div><div class="line"></div><div class="line">apm install vim-mode</div><div class="line"></div><div class="line">apm install autocomplete-python</div><div class="line">apm install python-tools</div><div class="line">apm install linter-flake8</div><div class="line"></div><div class="line">apm install autocomplete-paths</div></pre></td></tr></table></figure></p>
 <h2 id="Atom-自定义样式"><a href="#Atom-自定义样式" class="headerlink" title="Atom 自定义样式"></a>Atom 自定义样式</h2><p>（File –&gt; Stylesheet）</p>
 <p>.tree-view {<br>  // background-color: whitesmoke;<br>  font-family: Segoe UI ,Microsoft YaHei;<br>}<br>.markdown-preview.markdown-preview {<br>    font-family: “Segoe UI”, “Microsoft YaHei”<br>}</p>
@@ -494,6 +495,14 @@
 <p>I learn from two url.</p>
 <h1 id="Make-a-blog"><a href="#Make-a-blog" class="headerlink" title="Make a blog"></a>Make a blog</h1><h2 id="index-page-only-show-one-post"><a href="#index-page-only-show-one-post" class="headerlink" title="index page only show one post"></a>index page only show one post</h2><p>insert the code to <code>next-theme/laylot/index.swig</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;section id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</div><div class="line">  &#123;% for post in page.posts %&#125;</div><div class="line">    &#123;% if post.visible ===&apos;visible&apos; %&#125;</div><div class="line">      &#123;&#123; post_template.render(post, true) &#125;&#125;</div><div class="line">     &#123;% endif %&#125;</div><div class="line">  &#123;% endfor %&#125;</div><div class="line">&lt;/section&gt;</div></pre></td></tr></table></figure></p>
 <p>in post, write down <code>visible: true</code> in yaml header.</p>
+<p>已弃用，不是很好看。</p>
+<h2 id="How-to-make-font-colorful-when-you-are-writing"><a href="#How-to-make-font-colorful-when-you-are-writing" class="headerlink" title="How to make font colorful when you are writing"></a>How to make font colorful when you are writing</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#CD853F</span> <span class="attr">size</span>=<span class="string">7</span> <span class="attr">face</span>=<span class="string">"黑体"</span>&gt;</span>color=#0099ff size=72 face="黑体"<span class="tag">&lt;/<span class="name">font</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Size：规定文本的尺寸大小。可能的值：从 1 到 7 的数字。浏览器默认值是 3。</p>
+<p>效果：<font color="#CD853F" size="7" face="黑体">color=#0099ff size=72 face=”黑体”</font></p>
+<p>Color in use：<br><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Blue  <span class="comment">#0000FF rgb(0, 0, 255)</span></div><div class="line">Red   <span class="comment">#FF0000 rgb(255, 0, 0) </span></div><div class="line">ForestGreen <span class="comment">#228B22 rgb(34, 139, 34)</span></div><div class="line">BlueViolet  <span class="comment">#8A2BE2 rgb(138, 43, 226)</span></div><div class="line">Orange  <span class="comment">#FFA500 rgb(255, 165, 0)</span></div></pre></td></tr></table></figure></p>
+<font color="#0000FF">color=#0000FF</font><br><font color="#FF0000">color=#FF0000</font><br><font color="#228B22">color=#228B22</font><br><font color="#8A2BE2">color=#8A2BE2</font><br><font color="#FFA500">color=#FFA500</font>
+
+<p>ahk to insert:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">F9::</div><div class="line">Send ^c</div><div class="line">MyVal2= &lt;font color=#FF0000 face=&quot;STCAIYUN&quot;&gt;%clipboard%&lt;/font&gt;</div><div class="line">clipboard = %MyVal2%</div><div class="line">Send ^v</div><div class="line">return</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -664,7 +673,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -675,7 +684,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -686,7 +695,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-count">44</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -763,7 +772,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Reinstall-system"><span class="nav-number">1.</span> <span class="nav-text">Reinstall system</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#After-reinstall-system"><span class="nav-number">2.</span> <span class="nav-text">After reinstall system</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What-I-use-in-daily-life"><span class="nav-number">3.</span> <span class="nav-text">What I use in daily life</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-use-atom"><span class="nav-number">4.</span> <span class="nav-text">How to use atom:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Atom-自定义样式"><span class="nav-number">4.1.</span> <span class="nav-text">Atom 自定义样式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What-I-need-to-do-when-I-use-computer"><span class="nav-number">5.</span> <span class="nav-text">What I need to do, when I use computer?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SHA1-and-files-safety-dignital-signature"><span class="nav-number">6.</span> <span class="nav-text">SHA1 and files safety | dignital signature</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#google-Chrome-Extensions"><span class="nav-number">7.</span> <span class="nav-text">google Chrome Extensions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Make-a-blog"><span class="nav-number">8.</span> <span class="nav-text">Make a blog</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#index-page-only-show-one-post"><span class="nav-number">8.1.</span> <span class="nav-text">index page only show one post</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Reinstall-system"><span class="nav-number">1.</span> <span class="nav-text">Reinstall system</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#After-reinstall-system"><span class="nav-number">2.</span> <span class="nav-text">After reinstall system</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What-I-use-in-daily-life"><span class="nav-number">3.</span> <span class="nav-text">What I use in daily life</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lightly-softwere"><span class="nav-number">3.1.</span> <span class="nav-text">Lightly softwere</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-use-atom"><span class="nav-number">4.</span> <span class="nav-text">How to use atom:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Atom-自定义样式"><span class="nav-number">4.1.</span> <span class="nav-text">Atom 自定义样式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What-I-need-to-do-when-I-use-computer"><span class="nav-number">5.</span> <span class="nav-text">What I need to do, when I use computer?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SHA1-and-files-safety-dignital-signature"><span class="nav-number">6.</span> <span class="nav-text">SHA1 and files safety | dignital signature</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#google-Chrome-Extensions"><span class="nav-number">7.</span> <span class="nav-text">google Chrome Extensions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Make-a-blog"><span class="nav-number">8.</span> <span class="nav-text">Make a blog</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#index-page-only-show-one-post"><span class="nav-number">8.1.</span> <span class="nav-text">index page only show one post</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-make-font-colorful-when-you-are-writing"><span class="nav-number">8.2.</span> <span class="nav-text">How to make font colorful when you are writing</span></a></li></ol></li></ol></div>
             
 
           </div>

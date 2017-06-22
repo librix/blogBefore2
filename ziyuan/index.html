@@ -75,14 +75,14 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Ara">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <input type="text" class="ins-search-input" placeholder="Bir şeyler yaz...">
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -94,11 +94,11 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Articles',
-            PAGES: 'Pages',
-            CATEGORIES: 'Catégories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
+            POSTS: 'Gönderiler',
+            PAGES: 'Sayfalar',
+            CATEGORIES: 'Kategoriler',
+            TAGS: 'Etiketler',
+            UNTITLED: '(Başlıksız)',
         },
         ROOT_URL: '/ziyuan/',
         CONTENT_URL: '/ziyuan/content.json',
@@ -128,7 +128,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Ara">
     </div>
 
                 </td>
@@ -145,7 +145,7 @@
         
     <div class="widget-wrap" id="categories">
         <h3 class="widget-title">
-            <span>Catégories</span>
+            <span>Kategoriler</span>
             &nbsp;
             <a id="allExpand" href="#">
                 <i class="fa fa-angle-double-down fa-2x"></i>
@@ -155,6 +155,15 @@
         
         
          <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            uncategories
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/ziyuan/ziyuan/2017-06-21-xxx2xxx/">xxx2xxx</a></li>  </ul> 
+                    </li> 
+                    
                     <li class="directory">
                         <a href="#" data-role="directory">
                             <i class="fa fa-folder"></i>
@@ -225,6 +234,24 @@
                             生活窍门
                         </a>
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/ziyuan/ziyuan/2017-06-02-生活小窍门/">2017-06-02-生活小窍门</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            生活纪文
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            201706
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/ziyuan/ziyuan/2017-06-21-生活纪文/">2017-06-21-生活纪文</a></li>  </ul> 
+                    </li> 
+                     </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -359,9 +386,47 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title"><span>Récents</span></h3>
+        <h3 class="widget-title"><span>Son</span></h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/ziyuan/ziyuan/2017-06-21-xxx2xxx/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/ziyuan/categories/uncategories/">uncategories</a></p>
+                            <p class="item-title"><a href="/ziyuan/ziyuan/2017-06-21-xxx2xxx/" class="title">xxx2xxx</a></p>
+                            <p class="item-date"><time datetime="2017-06-20T16:00:00.000Z" itemprop="datePublished">2017-06-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/ziyuan/ziyuan/2017-06-21-生活纪文/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/ziyuan/categories/生活纪文/">生活纪文</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/ziyuan/categories/生活纪文/201706/">201706</a></p>
+                            <p class="item-title"><a href="/ziyuan/ziyuan/2017-06-21-生活纪文/" class="title">2017-06-21-生活纪文</a></p>
+                            <p class="item-date"><time datetime="2017-06-20T16:00:00.000Z" itemprop="datePublished">2017-06-21</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -420,44 +485,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/ziyuan/ziyuan/2017-06-02-儿童节/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/ziyuan/categories/语录收集/">语录收集</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/ziyuan/categories/语录收集/节日/">节日</a></p>
-                            <p class="item-title"><a href="/ziyuan/ziyuan/2017-06-02-儿童节/" class="title">儿童节</a></p>
-                            <p class="item-date"><time datetime="2017-06-01T16:00:00.000Z" itemprop="datePublished">2017-06-02</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/ziyuan/ziyuan/2017-06-01-有趣图/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/ziyuan/categories/有趣图/">有趣图</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/ziyuan/categories/有趣图/201706/">201706</a></p>
-                            <p class="item-title"><a href="/ziyuan/ziyuan/2017-06-01-有趣图/" class="title">2017-06-01-有趣图</a></p>
-                            <p class="item-date"><time datetime="2017-05-31T16:00:00.000Z" itemprop="datePublished">2017-06-01</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -465,34 +492,34 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title"><span>Archives</span></h3>
+        <h3 class="widget-title"><span>Arşivler</span></h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/ziyuan/archives/2017/06/">June 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/ziyuan/archives/2017/05/">May 2017</a><span class="archive-list-count">16</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/ziyuan/archives/2017/06/">June 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/ziyuan/archives/2017/05/">May 2017</a><span class="archive-list-count">16</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title"><span>Tags</span></h3>
+        <h3 class="widget-title"><span>Etiketler</span></h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/儿童节/">儿童节</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/图/">图</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/幽默/">幽默</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/文字/">文字</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/新闻/">新闻</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/有趣/">有趣</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/有趣图/">有趣图</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/机器学习/">机器学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/生活/">生活</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/端午/">端午</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/笑话/">笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/统计/">统计</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/统计学/">统计学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/随笔/">随笔</a><span class="tag-list-count">4</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/儿童节/">儿童节</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/关注/">关注</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/图/">图</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/幽默/">幽默</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/文字/">文字</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/新闻/">新闻</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/有趣/">有趣</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/有趣图/">有趣图</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/机器学习/">机器学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/生活/">生活</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/端午/">端午</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/笑话/">笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/统计/">统计</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/统计学/">统计学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/随笔/">随笔</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/ziyuan/tags/难民/">难民</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title"><span>Nuage de tags</span></h3>
+        <h3 class="widget-title"><span>Etiket bulutu</span></h3>
         <div class="widget tagcloud">
-            <a href="/ziyuan/tags/儿童节/" style="font-size: 10px;">儿童节</a> <a href="/ziyuan/tags/图/" style="font-size: 20px;">图</a> <a href="/ziyuan/tags/幽默/" style="font-size: 20px;">幽默</a> <a href="/ziyuan/tags/文字/" style="font-size: 13.33px;">文字</a> <a href="/ziyuan/tags/新闻/" style="font-size: 16.67px;">新闻</a> <a href="/ziyuan/tags/有趣/" style="font-size: 16.67px;">有趣</a> <a href="/ziyuan/tags/有趣图/" style="font-size: 10px;">有趣图</a> <a href="/ziyuan/tags/机器学习/" style="font-size: 10px;">机器学习</a> <a href="/ziyuan/tags/生活/" style="font-size: 10px;">生活</a> <a href="/ziyuan/tags/端午/" style="font-size: 10px;">端午</a> <a href="/ziyuan/tags/笑话/" style="font-size: 13.33px;">笑话</a> <a href="/ziyuan/tags/统计/" style="font-size: 10px;">统计</a> <a href="/ziyuan/tags/统计学/" style="font-size: 10px;">统计学</a> <a href="/ziyuan/tags/随笔/" style="font-size: 16.67px;">随笔</a>
+            <a href="/ziyuan/tags/儿童节/" style="font-size: 10px;">儿童节</a> <a href="/ziyuan/tags/关注/" style="font-size: 10px;">关注</a> <a href="/ziyuan/tags/图/" style="font-size: 20px;">图</a> <a href="/ziyuan/tags/幽默/" style="font-size: 20px;">幽默</a> <a href="/ziyuan/tags/文字/" style="font-size: 12.5px;">文字</a> <a href="/ziyuan/tags/新闻/" style="font-size: 17.5px;">新闻</a> <a href="/ziyuan/tags/有趣/" style="font-size: 15px;">有趣</a> <a href="/ziyuan/tags/有趣图/" style="font-size: 10px;">有趣图</a> <a href="/ziyuan/tags/机器学习/" style="font-size: 10px;">机器学习</a> <a href="/ziyuan/tags/生活/" style="font-size: 10px;">生活</a> <a href="/ziyuan/tags/端午/" style="font-size: 10px;">端午</a> <a href="/ziyuan/tags/笑话/" style="font-size: 12.5px;">笑话</a> <a href="/ziyuan/tags/统计/" style="font-size: 10px;">统计</a> <a href="/ziyuan/tags/统计学/" style="font-size: 10px;">统计学</a> <a href="/ziyuan/tags/随笔/" style="font-size: 20px;">随笔</a> <a href="/ziyuan/tags/难民/" style="font-size: 10px;">难民</a>
         </div>
     </div>
 
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title"><span>Liens</span></h3>
+        <h3 class="widget-title"><span>Linkler</span></h3>
         <div class="widget">
             <ul>
                 
@@ -506,6 +533,172 @@
 </aside>
             
             <section id="main">
+        <article id="post-2017-06-21-xxx2xxx" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/ziyuan/categories/uncategories/">uncategories</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/ziyuan/tags/随笔/">随笔</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/ziyuan/ziyuan/2017-06-21-xxx2xxx/">
+            <time datetime="2017-06-20T16:00:00.000Z" itemprop="datePublished">2017-06-21</time>
+        </a>
+    </div>
+
+
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/librix/ziyuan-site/raw/writing/source/_posts/2017-06-21-xxx2xxx.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/librix/ziyuan-site/edit/writing/source/_posts/2017-06-21-xxx2xxx.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/librix/ziyuan-site/commits/writing/source/_posts/2017-06-21-xxx2xxx.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/ziyuan/ziyuan/2017-06-21-xxx2xxx/">xxx2xxx</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <h1 id="xml-json-To-ASS"><a href="#xml-json-To-ASS" class="headerlink" title="xml/json To ASS"></a>xml/json To ASS</h1><p><a href="https://danmu2ass.codeplex.com/" rel="external nofollow noopener noreferrer" target="_blank">Danmu2Ass</a>是一款简单地将你的xml/json弹幕文件转换为ASS字幕文件的小工具。支持命令行和一些简单的开关。<br>此工具基于.NET Framework 4.0开发，转换核心基于Niconvert项目，运行环境为内置的IronPython 2.7。</p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-2017-06-21-生活纪文" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/ziyuan/categories/生活纪文/">生活纪文</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/ziyuan/categories/生活纪文/201706/">201706</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/ziyuan/tags/关注/">关注</a>, <a class="tag-link" href="/ziyuan/tags/新闻/">新闻</a>, <a class="tag-link" href="/ziyuan/tags/随笔/">随笔</a>, <a class="tag-link" href="/ziyuan/tags/难民/">难民</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/ziyuan/ziyuan/2017-06-21-生活纪文/">
+            <time datetime="2017-06-20T16:00:00.000Z" itemprop="datePublished">2017-06-21</time>
+        </a>
+    </div>
+
+
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/librix/ziyuan-site/raw/writing/source/_posts/2017-06-21-生活纪文.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/librix/ziyuan-site/edit/writing/source/_posts/2017-06-21-生活纪文.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/librix/ziyuan-site/commits/writing/source/_posts/2017-06-21-生活纪文.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/ziyuan/ziyuan/2017-06-21-生活纪文/">2017-06-21-生活纪文</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <p>看到一则新闻，中国似乎要为接收难民做准备，可是网上都没有找到关于他的说明。下文是关于这条<a href="http://weibo.com/u/2283318110" rel="external nofollow noopener noreferrer" target="_blank">新闻的说明</a>。<br><img src="http://ww1.sinaimg.cn/large/ac3323ebgy1fgt38xiu6cj20hs2887wh.jpg" alt=""></p>
+<p>数据安全公司UpGuard证实，亚马逊的云空间上存在着一个1.1tb的美国选民数据库，其中几乎包含所有2亿美国登记选民的个人信息，包括姓名、家庭住址、电话号码、选民登记信息等详细数据。数据来源据称与共和党助特朗普赢得大选有关.<br>怎么定义安全？</p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-2017-06-03-有趣图" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
@@ -592,7 +785,7 @@
         
             </p></div>   
             <div class="article-more-link">
-                <a href="/ziyuan/ziyuan/2017-06-03-有趣图/#more">자세히 보기</a>
+                <a href="/ziyuan/ziyuan/2017-06-03-有趣图/#more">Daha fazla oku</a>
             </div>
         
         <footer class="article-footer">
@@ -692,7 +885,7 @@
         
             </div>   
             <div class=" article-more-link"="">
-                <a href="/ziyuan/ziyuan/2017-06-02-有趣图/#more">자세히 보기</a>
+                <a href="/ziyuan/ziyuan/2017-06-02-有趣图/#more">Daha fazla oku</a>
             </p></div>
         
         <footer class="article-footer">
@@ -970,7 +1163,7 @@
         
             </p></div>   
             <div class="article-more-link">
-                <a href="/ziyuan/ziyuan/2017-06-01-有趣图/#more">자세히 보기</a>
+                <a href="/ziyuan/ziyuan/2017-06-01-有趣图/#more">Daha fazla oku</a>
             </div>
         
         <footer class="article-footer">
@@ -1159,7 +1352,7 @@
         
             </p></div>   
             <div class="article-more-link">
-                <a href="/ziyuan/ziyuan/2017-05-31-有趣图/#more">자세히 보기</a>
+                <a href="/ziyuan/ziyuan/2017-05-31-有趣图/#more">Daha fazla oku</a>
             </div>
         
         <footer class="article-footer">
@@ -1259,188 +1452,7 @@
         
             </p></div>   
             <div class="article-more-link">
-                <a href="/ziyuan/ziyuan/2017-05-30-逻辑反转的笑话/#more">자세히 보기</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
-        <article id="post-2017-05-30-端午专题" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/ziyuan/categories/语录收集/">语录收集</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/ziyuan/categories/语录收集/节日/">节日</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/ziyuan/tags/端午/">端午</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/ziyuan/ziyuan/2017-05-30-端午专题/">
-            <time datetime="2017-05-29T16:00:00.000Z" itemprop="datePublished">2017-05-30</time>
-        </a>
-    </div>
-
-
-                        
-                            <div class="article-meta-button">
-                                <a href="https://github.com/librix/ziyuan-site/raw/writing/source/_posts/2017-05-30-端午专题.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/librix/ziyuan-site/edit/writing/source/_posts/2017-05-30-端午专题.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/librix/ziyuan-site/commits/writing/source/_posts/2017-05-30-端午专题.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/ziyuan/ziyuan/2017-05-30-端午专题/">端午专题</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p></p><p><img src="https://wx2.sinaimg.cn/large/85d1229fgy1fg35wzumfag20rs0b47lk.gif" alt="Google的端午Doodle"></p>
-<p><img src="https://wx4.sinaimg.cn/mw690/88a83461gy1fg3426smpwg20b408ckjl.gif" alt=""></p>
-<h1 id="天地交泰九毒日-端午九毒日之首"><a href="#天地交泰九毒日-端午九毒日之首" class="headerlink" title="天地交泰九毒日,端午九毒日之首"></a>天地交泰九毒日,端午九毒日之首</h1><p>阴历五月到了，农历五月俗称毒月。其中更有九天伤身损气耗精元的日子，就是古代所谓的「九毒日」。很多人听至此，一笑而过，说是迷信，中华五千年来的智慧结晶，是否是现代年轻人所能理解的呢，让我们解开其中的奥秘。</p>
-<p>端午正是九毒日之首，也因此这一天有许多喝雄黄酒、插艾草…等避邪驱毒的仪式，其中都寓有古德智慧经验的传承。 农历五月，是最要注意的一个月份。能全月不同房，对身心都有极大的好处。所以古代有习俗，五月让妇女回娘家住一个月。其中的九毒日更要慎重。 以下是今年农历五月份的「九毒日」，请千万谨慎这九天。</p>
-<p>五月初五也就是端五这一天开始、初六、初七、十五、十六、十七以及二五、二六、二七，此九天为 “天地交泰九毒日”；“农历五月十四”为天地交泰日，一共十天。这十天内，务必端容肃己，严禁杀生，行淫，否则严重伤身损气耗精元。</p>
-<p>
-                
-            
-        
-        
-            </p></div>   
-            <div class="article-more-link">
-                <a href="/ziyuan/ziyuan/2017-05-30-端午专题/#more">자세히 보기</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
-        <article id="post-2017-05-30-每日新闻" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/ziyuan/categories/每日新闻/">每日新闻</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/ziyuan/categories/每日新闻/201705/">201705</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/ziyuan/tags/新闻/">新闻</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/ziyuan/ziyuan/2017-05-30-每日新闻/">
-            <time datetime="2017-05-29T16:00:00.000Z" itemprop="datePublished">2017-05-30</time>
-        </a>
-    </div>
-
-
-                        
-                            <div class="article-meta-button">
-                                <a href="https://github.com/librix/ziyuan-site/raw/writing/source/_posts/2017-05-30-每日新闻.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/librix/ziyuan-site/edit/writing/source/_posts/2017-05-30-每日新闻.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/librix/ziyuan-site/commits/writing/source/_posts/2017-05-30-每日新闻.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/ziyuan/ziyuan/2017-05-30-每日新闻/">2017-05-30-每日新闻</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-            
-        
-        
-            <p>@一枚粘人的小妖 五月二十五号下午五点来钟，我从地铁五棵松站上车，上车后在一个座位坐下，我得右边是个妹子，左边就是这个流氓老头。我刚坐下，就觉得这个老头用他的胳膊蹭我得胳膊还有胸部，我本能的往那个妹子那边挪了一下，然后他还追着我蹭，我就害怕了，因为当时就我一个人，然后我就对那个老头说我说麻烦您往那边挪挪，我别碰着您。结果那个老头说你他妈的小东西让谁挪，我说您别骂人呢。然后就冲着我头打我，一大巴掌糊我脸，然后我本能的站起来，我说你蹭完人，你还凭什么打人，我看他岁数大没有还手，然后老流氓就也站起来，又大轮巴掌，打我头，把我的眼镜打掉了，这个时整个车厢的人都围过来了，然后就指责他说你凭什么大人家姑娘，有个北京大姐使劲的嚷说姑娘快报110这种人不能放他走，然后，这个老流氓看我要报警就急了窜过来要抢我的手机打我，被其他车厢的男乘客给阻止了，我报警以后，车子马上就要到万寿路站了，然后这个老流氓就要逃走，我一把抓住他不让他跑，然后他就又殴打我的头，这时候他硬往车门跑，在七八个的乘客的帮助下，把他堵截在万寿路站内，但是在下车的时候他有踢我得肚子，踹我的腿，把我踢倒，是车站内的辅警和安全员大妈把我服起来，这个时候七八个不认识乘客把这个老流氓围住，老流氓的衣服都被愤怒的乘客撕破。车站内警察来了，目击的人们就说了经过，然后派出所的警察接警以后就把我和那个施暴者一起带到了派出所。我当晚就去301医院检查了，尿浅血，然后就是身上有顿挫伤。当晚那个老流氓无耻的装病打999逃离。然后第二天当班民警不在，让我今天去，我今天去了，做了笔录，没有接受调解，去做了伤情鉴定。等待结果。但是这个事儿我就想给广大妹子提醒，要是遇到这个流氓离这远点他，他不光猥亵流氓，还暴力手段打人。此人身高快一米八，清瘦，65岁，据说来京三十多年，有一个女儿是95年的，在一个貌似也是个正经事业还是什么单位退休，因为当天事发后在警察局警察说了句就算你是记者，你能打人嘛。我问警察呢但是不告诉施暴者名字。我感谢帮我围堵的正义的乘客们，谢谢你们，要不就让这个坏人跑了。我要感谢110警察同志迅速出警。目前诊断结果头部，和身体顿挫伤，还有尿浅血，警察已经带我去做了伤情鉴定，我相信我们的执法部门会公证的依法处理，同事也告诫妹子们要小心，因为这个流氓说他有心脏病，如果他真有病，要制裁他，可能有判定但是拘留所不会收监，还望妹子们小心此人，太可怕了除了猥亵还暴力殴打。也征求那天目击的乘客们，还有有妹子拍了视频，求看到联系。我一定会坚持到底制裁这个老流氓。@北京人不知道的北京事儿  @平安北京  @法医秦明<br><img src="http://wx2.sinaimg.cn/mw690/53c7cd33ly1fg36q2c977j20hs2ffaqs.jpg" alt="仲大军先生的声明。希望通过法律途径解决。 ​​​​"><br>@马伯庸:这句话应黑体标粗：“如果多少是个善良懂礼貌的人，能气得我禁不住动手吗？” [摊手]  //@唐缺_九州:我看明白了，敢情是小姑娘觉得老先生仙风道骨很有魅力意图非礼、老先生奋起抗暴啊//@顾扯淡: 看完声明确认了两件事，一是老先生承认了自己就是当事人</p>
-
+                <a href="/ziyuan/ziyuan/2017-05-30-逻辑反转的笑话/#more">Daha fazla oku</a>
             </div>
         
         <footer class="article-footer">
@@ -1455,7 +1467,7 @@
 
     
         <nav id="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/ziyuan/page/2/">2</a><a class="page-number" href="/ziyuan/page/3/">3</a><a class="extend next" rel="next" href="/ziyuan/page/2/">Suiv &raquo;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/ziyuan/page/2/">2</a><a class="page-number" href="/ziyuan/page/3/">3</a><a class="extend next" rel="next" href="/ziyuan/page/2/">Sonraki &raquo;</a>
         </nav>
     
 </section>
