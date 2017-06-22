@@ -5,7 +5,7 @@
   <link href="/ziyuan/atom.xml" rel="self"/>
   
   <link href="http://librix.github.io/ziyuan/"/>
-  <updated>2017-06-21T15:28:31.011Z</updated>
+  <updated>2017-06-22T07:48:23.432Z</updated>
   <id>http://librix.github.io/ziyuan/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【you-Get】How to download a web video from url</title>
+    <link href="http://librix.github.io/ziyuan/ziyuan/2017-06-21-%5Byou-Get%5DHow%20to%20download%20a%20web%20video%20from%20url/"/>
+    <id>http://librix.github.io/ziyuan/ziyuan/2017-06-21-[you-Get]How to download a web video from url/</id>
+    <published>2017-06-20T16:00:00.000Z</published>
+    <updated>2017-06-22T07:48:23.432Z</updated>
+    
+    <content type="html"><![CDATA[<p>Download Video from url。</p>
+<ol>
+<li>install <a href="https://www.python.org/" rel="external nofollow noopener noreferrer" target="_blank">Python 3.0</a></li>
+<li>install  You-Get an make sure its installation is success.<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip3 install you-get</div><div class="line">you-get</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>make ahk link<code>ctrl+D</code> to clipboard. [NO NEED NECESSAERRY]</p>
+<p>download a video:<br><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">you-get -o <span class="literal">F</span>:/Downloads/Video [视频地址]</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">^d::</div><div class="line">MyValYouget=you-get -o F:/Downloads/Video %clipboard%</div><div class="line">clipboard =%MyValYouget%</div><div class="line">return</div></pre></td></tr></table></figure>
+<p>清晰度和格式<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">you-get -i [视频地址]</div><div class="line">you-get --<span class="built_in">format</span>=hd2 [视频地址]</div></pre></td></tr></table></figure></p>
+<p>use Potplayer to play a web video<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">you-get -p PotPlayerMini64.exe [视频地址]</div></pre></td></tr></table></figure></p>
+<p>the definitionof download<br><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ctrl+c = interrupt a download</div><div class="line">restart: re-enter the command : you-get -o <span class="literal">F</span>:/Downloads/Video [视频地址]</div><div class="line">Forced restart:  you-get -f [url]</div></pre></td></tr></table></figure></p>
+<p>You-get can also download 弹幕 from bilibili and 专辑 from Youku AND picture from many ..url。</p>
+<p>Make you install Potplayer, <a href="https://www.ffmpeg.org/" rel="external nofollow noopener noreferrer" target="_blank">ffmpeg</a>, <a href="https://libav.org/" rel="external nofollow noopener noreferrer" target="_blank">libav</a> before.</p>
+<h1 id="Other-choice"><a href="#Other-choice" class="headerlink" title="Other choice"></a>Other choice</h1><p><a href="https://github.com/rg3/youtube-dl/blob/master/README.md#readme" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/rg3/youtube-dl/blob/master/README.md#readme</a></p>
+<p><a href="http://get.ftqq.com/7552.get" rel="external nofollow noopener noreferrer" target="_blank">史上最强视频网站真实地址解析</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Download Video from url。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;install &lt;a href=&quot;https://www.python.org/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blan
+    
+    </summary>
+    
+      <category term="破解软件" scheme="http://librix.github.io/ziyuan/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="下载视频" scheme="http://librix.github.io/ziyuan/tags/%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91/"/>
+    
+      <category term="视频" scheme="http://librix.github.io/ziyuan/tags/%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
   
   <entry>
     <title>xxx2xxx</title>
@@ -477,6 +519,46 @@
   </entry>
   
   <entry>
+    <title>端午专题</title>
+    <link href="http://librix.github.io/ziyuan/ziyuan/2017-05-30-%E7%AB%AF%E5%8D%88%E4%B8%93%E9%A2%98/"/>
+    <id>http://librix.github.io/ziyuan/ziyuan/2017-05-30-端午专题/</id>
+    <published>2017-05-29T16:00:00.000Z</published>
+    <updated>2017-06-02T01:18:16.033Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://wx2.sinaimg.cn/large/85d1229fgy1fg35wzumfag20rs0b47lk.gif" alt="Google的端午Doodle"></p>
+<p><img src="https://wx4.sinaimg.cn/mw690/88a83461gy1fg3426smpwg20b408ckjl.gif" alt=""></p>
+<h1 id="天地交泰九毒日-端午九毒日之首"><a href="#天地交泰九毒日-端午九毒日之首" class="headerlink" title="天地交泰九毒日,端午九毒日之首"></a>天地交泰九毒日,端午九毒日之首</h1><p>阴历五月到了，农历五月俗称毒月。其中更有九天伤身损气耗精元的日子，就是古代所谓的「九毒日」。很多人听至此，一笑而过，说是迷信，中华五千年来的智慧结晶，是否是现代年轻人所能理解的呢，让我们解开其中的奥秘。</p>
+<p>端午正是九毒日之首，也因此这一天有许多喝雄黄酒、插艾草…等避邪驱毒的仪式，其中都寓有古德智慧经验的传承。 农历五月，是最要注意的一个月份。能全月不同房，对身心都有极大的好处。所以古代有习俗，五月让妇女回娘家住一个月。其中的九毒日更要慎重。 以下是今年农历五月份的「九毒日」，请千万谨慎这九天。</p>
+<p>五月初五也就是端五这一天开始、初六、初七、十五、十六、十七以及二五、二六、二七，此九天为 “天地交泰九毒日”；“农历五月十四”为天地交泰日，一共十天。这十天内，务必端容肃己，严禁杀生，行淫，否则严重伤身损气耗精元。</p>
+<p>《黄帝内经》中有段采用轩辕黄帝和素女对话方式，谈论了性生活的忌日。素女说：每年农历五月，是天地之气交合之日，男女不可行房，凡性交者不出3年必死。用什么可以验证呢？取白色新布一尺，于当晚悬挂东面墙上，第二天早上观看必有血色，切忌合房。</p>
+<p>对于这种规劝，许多人是不信的，但知道后又未必敢以身试法。农历五月十六日子夜观天象，天呈淡红色。子时是23时至1时，不是出晚霞的时辰，此时天色红必有原因。人类对大自然的认识是极为有限的。传说古人为验证此忌日，为一些乞丐提供费用在这一天嫖娼，跟踪调查的结果证明了素女的观点。在当代生活中，常有一些人突然猝死而查不出任何病因，究竟是否与此有关，有待于进一步探讨。</p>
+<p>特别是性欲重的人小心在五毒月失掉真阳!特征是控制不了自己,不停泄欲!近期最好适当降降温,睡睡凉席.绝不是儿戏!五毒月大家正好修身养性!</p>
+<p>与此事有关联的一首小诗:</p>
+<p>五月多奇事,能量归虚无,</p>
+<p>光明展现有,归根复命隐于无!</p>
+<p>解释:五月为天地交泰之月，阴阳混沌不分，人体脏腑气血受极大影响，保精惜命，宁神内守，安然度过，反应人身,肚里空荡荡,走步无力,没有精神.善恶人皆是如此!</p>
+<p>人与宇宙为一体，人体五脏六腑皆受天地运行的影响，此时的节气，乃阴阳相争死生分判之时，宜从农历五月初一禁起，戒过一月。果能色欲撙节，自可百病消除。今人每多腰腿酸疼，脊肩酸麻，四肢无力，背心发热，咳嗽不止，时而头昏头痛，时而眼花眼痛，秋冬则恶寒怕风，手足发冷，春夏则喉疼目红，腹痛闭痧。</p>
+<p>九毒日与月球的运行有关，与地球绕太阳公转有关，与地球上天气变化有关。人在宇宙中是十分渺小的，天体的任何变化都会对人产生影响，这是已被现代科学证实了。中国古代的理论多靠哲学推理和统计学验证，而不是靠实验室里的论证。至于古代养生学者列举的忌日的根据是什么，只有靠现代人去探研了。</p>
+<p>#</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://wx2.sinaimg.cn/large/85d1229fgy1fg35wzumfag20rs0b47lk.gif&quot; alt=&quot;Google的端午Doodle&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://wx4.sinaimg.
+    
+    </summary>
+    
+      <category term="语录收集" scheme="http://librix.github.io/ziyuan/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/"/>
+    
+      <category term="节日" scheme="http://librix.github.io/ziyuan/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/%E8%8A%82%E6%97%A5/"/>
+    
+    
+      <category term="端午" scheme="http://librix.github.io/ziyuan/tags/%E7%AB%AF%E5%8D%88/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2017-05-30-有趣图</title>
     <link href="http://librix.github.io/ziyuan/ziyuan/2017-05-30-%E6%9C%89%E8%B6%A3%E5%9B%BE/"/>
     <id>http://librix.github.io/ziyuan/ziyuan/2017-05-30-有趣图/</id>
@@ -548,46 +630,6 @@
       <category term="图" scheme="http://librix.github.io/ziyuan/tags/%E5%9B%BE/"/>
     
       <category term="幽默" scheme="http://librix.github.io/ziyuan/tags/%E5%B9%BD%E9%BB%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>端午专题</title>
-    <link href="http://librix.github.io/ziyuan/ziyuan/2017-05-30-%E7%AB%AF%E5%8D%88%E4%B8%93%E9%A2%98/"/>
-    <id>http://librix.github.io/ziyuan/ziyuan/2017-05-30-端午专题/</id>
-    <published>2017-05-29T16:00:00.000Z</published>
-    <updated>2017-06-02T01:18:16.033Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://wx2.sinaimg.cn/large/85d1229fgy1fg35wzumfag20rs0b47lk.gif" alt="Google的端午Doodle"></p>
-<p><img src="https://wx4.sinaimg.cn/mw690/88a83461gy1fg3426smpwg20b408ckjl.gif" alt=""></p>
-<h1 id="天地交泰九毒日-端午九毒日之首"><a href="#天地交泰九毒日-端午九毒日之首" class="headerlink" title="天地交泰九毒日,端午九毒日之首"></a>天地交泰九毒日,端午九毒日之首</h1><p>阴历五月到了，农历五月俗称毒月。其中更有九天伤身损气耗精元的日子，就是古代所谓的「九毒日」。很多人听至此，一笑而过，说是迷信，中华五千年来的智慧结晶，是否是现代年轻人所能理解的呢，让我们解开其中的奥秘。</p>
-<p>端午正是九毒日之首，也因此这一天有许多喝雄黄酒、插艾草…等避邪驱毒的仪式，其中都寓有古德智慧经验的传承。 农历五月，是最要注意的一个月份。能全月不同房，对身心都有极大的好处。所以古代有习俗，五月让妇女回娘家住一个月。其中的九毒日更要慎重。 以下是今年农历五月份的「九毒日」，请千万谨慎这九天。</p>
-<p>五月初五也就是端五这一天开始、初六、初七、十五、十六、十七以及二五、二六、二七，此九天为 “天地交泰九毒日”；“农历五月十四”为天地交泰日，一共十天。这十天内，务必端容肃己，严禁杀生，行淫，否则严重伤身损气耗精元。</p>
-<p>《黄帝内经》中有段采用轩辕黄帝和素女对话方式，谈论了性生活的忌日。素女说：每年农历五月，是天地之气交合之日，男女不可行房，凡性交者不出3年必死。用什么可以验证呢？取白色新布一尺，于当晚悬挂东面墙上，第二天早上观看必有血色，切忌合房。</p>
-<p>对于这种规劝，许多人是不信的，但知道后又未必敢以身试法。农历五月十六日子夜观天象，天呈淡红色。子时是23时至1时，不是出晚霞的时辰，此时天色红必有原因。人类对大自然的认识是极为有限的。传说古人为验证此忌日，为一些乞丐提供费用在这一天嫖娼，跟踪调查的结果证明了素女的观点。在当代生活中，常有一些人突然猝死而查不出任何病因，究竟是否与此有关，有待于进一步探讨。</p>
-<p>特别是性欲重的人小心在五毒月失掉真阳!特征是控制不了自己,不停泄欲!近期最好适当降降温,睡睡凉席.绝不是儿戏!五毒月大家正好修身养性!</p>
-<p>与此事有关联的一首小诗:</p>
-<p>五月多奇事,能量归虚无,</p>
-<p>光明展现有,归根复命隐于无!</p>
-<p>解释:五月为天地交泰之月，阴阳混沌不分，人体脏腑气血受极大影响，保精惜命，宁神内守，安然度过，反应人身,肚里空荡荡,走步无力,没有精神.善恶人皆是如此!</p>
-<p>人与宇宙为一体，人体五脏六腑皆受天地运行的影响，此时的节气，乃阴阳相争死生分判之时，宜从农历五月初一禁起，戒过一月。果能色欲撙节，自可百病消除。今人每多腰腿酸疼，脊肩酸麻，四肢无力，背心发热，咳嗽不止，时而头昏头痛，时而眼花眼痛，秋冬则恶寒怕风，手足发冷，春夏则喉疼目红，腹痛闭痧。</p>
-<p>九毒日与月球的运行有关，与地球绕太阳公转有关，与地球上天气变化有关。人在宇宙中是十分渺小的，天体的任何变化都会对人产生影响，这是已被现代科学证实了。中国古代的理论多靠哲学推理和统计学验证，而不是靠实验室里的论证。至于古代养生学者列举的忌日的根据是什么，只有靠现代人去探研了。</p>
-<p>#</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://wx2.sinaimg.cn/large/85d1229fgy1fg35wzumfag20rs0b47lk.gif&quot; alt=&quot;Google的端午Doodle&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://wx4.sinaimg.
-    
-    </summary>
-    
-      <category term="语录收集" scheme="http://librix.github.io/ziyuan/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/"/>
-    
-      <category term="节日" scheme="http://librix.github.io/ziyuan/categories/%E8%AF%AD%E5%BD%95%E6%94%B6%E9%9B%86/%E8%8A%82%E6%97%A5/"/>
-    
-    
-      <category term="端午" scheme="http://librix.github.io/ziyuan/tags/%E7%AB%AF%E5%8D%88/"/>
     
   </entry>
   
@@ -885,58 +927,6 @@
     
     
       <category term="新闻" scheme="http://librix.github.io/ziyuan/tags/%E6%96%B0%E9%97%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017-05-27-有趣图</title>
-    <link href="http://librix.github.io/ziyuan/ziyuan/2017-05-27-%E6%9C%89%E8%B6%A3%E5%9B%BE/"/>
-    <id>http://librix.github.io/ziyuan/ziyuan/2017-05-27-有趣图/</id>
-    <published>2017-05-26T16:00:00.000Z</published>
-    <updated>2017-05-30T06:15:22.573Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://wx1.sinaimg.cn/large/006ihPpWly1ffykpxohb9g30e20f4x6u.gif" alt="奶爸，幼稚鬼啦"></p>
-<p><img src="https://wx1.sinaimg.cn/large/006iaWqjly1ffwit5bgptj30dc0r9jvf.jpg" alt="小兔几的一生"></p>
-<p><img src="http://ww2.sinaimg.cn/large/006D2KSdjw1fap8h4sm7ug306t07t4q1.gif" alt="火苗"></p>
-<p><img src="https://ww3.sinaimg.cn/large/006D2KSdjw1fatt1iw3rng30f008bx6p.gif" alt="风儿吹"></p>
-<p><img src="https://ww4.sinaimg.cn/large/006D2xVljw1fam7hxk2jgg30ak06qnpe.gif" alt="温文雅尔"></p>
-<p><img src="http://wx2.sinaimg.cn/mw690/006D2KSdly1ffxajp96ylg30hs09mqv9.gif" alt="炸弹扔外面了"></p>
-<p><img src="http://wx1.sinaimg.cn/mw690/e979b879ly1ffy0zx5xl3j20hs1441aq.jpg" alt="当你明白失去远比拥有更踏实的时候 你才能活的释然 但凡辛苦 便是强求"></p>
-<p><img src="http://wx1.sinaimg.cn/mw690/b8b73ba1gy1ffvng9601lj20jg1gs0y3.jpg" alt="马来西亚画手“Fishball 阿鱼丸”更新的和199身高的男友的日常"><br><img src="http://wx2.sinaimg.cn/mw690/b8b73ba1gy1ffvngcx7zfj20qo0krdib.jpg" alt=""><br><img src="http://wx4.sinaimg.cn/mw690/b8b73ba1gy1ffvng6swu4j20jk0u777y.jpg" alt=""><br><img src="http://wx1.sinaimg.cn/mw690/b8b73ba1gy1ffvngalnd3j20jg190wj6.jpg" alt=""><br><img src="http://wx2.sinaimg.cn/mw690/b8b73ba1gy1ffvngfok3sj20kk1dctf4.jpg" alt=""></p>
-<p><img src="http://wx1.sinaimg.cn/large/6adc108fgy1ffu03vt0z0g2099052hdt.gif" alt="偷袭"></p>
-<p>刘亦菲登《时尚芭莎》5月刊封面动图花絮<br><img src="http://wx1.sinaimg.cn/mw690/006gPo57ly1ffibba35m2g30dw07tu10.gif" alt=""><br><img src="http://wx2.sinaimg.cn/mw690/006gPo57ly1ffibbd4p5eg30dw07t4qr.gif" alt=""></p>
-<p><img src="http://sc3.hao123img.com/erjiImg//haomeizi/3eea1c1071835fc479332b809d0b3b3b" alt="为什么感觉自己好羡慕这个女生的生活状态，==，作为工业标准的一个参考吧"></p>
-<p>#设计师#<br><img src="http://sc4.hao123img.com/erjiImg//haomeizi/3b0f16571577127e36efead36cd0a906" alt="五彩斑斓的黑色"><br><img src="http://sc4.hao123img.com/erjiImg//haomeizi/e05f1d85ccc92496260a24ecdd8e7ceb" alt="画不出来"><br><img src="http://sc1.hao123img.com/erjiImg//haomeizi/c5fe6f7f832e5956c8395a4cc5b353e9" alt="伤眼的蓝底红字"><br><img src="http://sc0.hao123img.com/erjiImg//haomeizi/3868e51c97ce6747421986880d7df884" alt="放大又缩小"><br><img src="http://wx4.sinaimg.cn/mw690/005Rwhyegy1ffxeteudgtj30c808mq3s.jpg" alt="我就是让设设计师改一稿方案"><br><img src="http://wx4.sinaimg.cn/mw690/005Rwhyegy1ffxete80z7j30dc0gita4.jpg" alt="翻个身"><br><img src="http://wx3.sinaimg.cn/mw690/005Rwhyegy1ffxet8zizug308k06lx6p.gif" alt="解决问题的最快方式"></p>
-<h1 id="Part-2"><a href="#Part-2" class="headerlink" title="Part 2"></a>Part 2</h1><p>构图不怎么样，内容似乎又有些意思。很多PS的存在。</p>
-<p><img src="http://wx2.sinaimg.cn/mw690/006D2KSdly1ffxigjhjegj30hs0vkq46.jpg" alt="开车"></p>
-<p><img src="https://wx1.sinaimg.cn/large/ae979730gy1ffytrrjiiqj20yi0vagp2.jpg" alt="威尔史密斯被黑得最白的一次"></p>
-<p><img src="https://wx1.sinaimg.cn/mw690/67ece773ly1ffyidvl9hsj20m80ci76h.jpg" alt="=="></p>
-<p><img src="https://wx2.sinaimg.cn/mw690/661b1d6dly1ffyqw02ulsj20h80ck7df.jpg" alt="如何记住一幅名画?"></p>
-<p><img src="https://wx3.sinaimg.cn/large/006DBeHygy1ffynsbsrxqj30b407ft92.jpg" alt="@流浪的查理：这是啥字啊？真的有这么diao的字？//@博物杂志：心。全文：外貌美只能取悦一时，内心美方能经久不衰//@Vilor_唯诺：所以比心？"></p>
-<p><img src="https://www1.wi.to/2017/05/26/bdd16312f1ea0a49bd1cc2f27311a83a.jpg" alt="有爱的老两口"></p>
-<p><img src="https://www1.wi.to/2017/05/26/cdd520efdb9ae4b875d70f86f70b7a30.jpg" alt="敬老"></p>
-<p><img src="http://wx2.sinaimg.cn/mw690/005VJV2Oly1ffzmpthmezj30j61pvh1h.jpg" alt="肩膀扛火车（还记得手撕鬼子）"></p>
-<p><img src="http://wx1.sinaimg.cn/mw690/005upFlzgy1fforo1d0vmj30j60jpgno.jpg" alt="没有肥过的人"></p>
-<p><img src="http://wx4.sinaimg.cn/mw690/e979b879ly1ffy12jabt8j20j62gy4qp.jpg" alt="实在的女生"></p>
-<p><img src="http://wx2.sinaimg.cn/mw690/e979b879ly1ffy0dkqzgej20c631dk36.jpg" alt="从内裤的选择上来看女生对xxoo的态度"></p>
-<p><img src="http://wx2.sinaimg.cn/mw690/e979b879ly1ffy1qhj44yj20gd1p51kx.jpg" alt="奇案：常规映象中发生此类事件通常是女性吃亏。一般而言，女性的外貌只要正常，则是影视作品中社会生活的常态。通过对女性面部的加工，逐渐导向一种搞笑艺术的差别，与现实生活的对比，是以产生笑料。而后的一本正经，反是将包袱一番再翻"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://wx1.sinaimg.cn/large/006ihPpWly1ffykpxohb9g30e20f4x6u.gif&quot; alt=&quot;奶爸，幼稚鬼啦&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://wx1.sinaimg.cn/large
-    
-    </summary>
-    
-      <category term="有趣图" scheme="http://librix.github.io/ziyuan/categories/%E6%9C%89%E8%B6%A3%E5%9B%BE/"/>
-    
-      <category term="201705" scheme="http://librix.github.io/ziyuan/categories/%E6%9C%89%E8%B6%A3%E5%9B%BE/201705/"/>
-    
-    
-      <category term="图" scheme="http://librix.github.io/ziyuan/tags/%E5%9B%BE/"/>
-    
-      <category term="幽默" scheme="http://librix.github.io/ziyuan/tags/%E5%B9%BD%E9%BB%98/"/>
     
   </entry>
   
