@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>NAT相关 | Librix的知识世界</title>
+    
+    
+        <meta name="keywords" content="随笔">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="NAT相关什么是NAT NAT（Network Address Translation），网络地址转换。是1994年提出的。当在专用网内部的一些主机本来已经分配到了本地IP地址（即仅在本专用网内使用的专用地址），但现在又想和因特网上的主机通信（并不需要加密）时，可使用NAT方法。。装有NAT软件的路由器叫做NAT路由器，它至少有一个有效的外部全球IP地址。这样，所有使用本地地址的主机在和外界通信时">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NAT相关">
+<meta property="og:url" content="http://librix.github.io/wiki/wiki/2017-07-28-NAT相关/index.html">
+<meta property="og:site_name" content="Librix的知识世界">
+<meta property="og:description" content="NAT相关什么是NAT NAT（Network Address Translation），网络地址转换。是1994年提出的。当在专用网内部的一些主机本来已经分配到了本地IP地址（即仅在本专用网内使用的专用地址），但现在又想和因特网上的主机通信（并不需要加密）时，可使用NAT方法。。装有NAT软件的路由器叫做NAT路由器，它至少有一个有效的外部全球IP地址。这样，所有使用本地地址的主机在和外界通信时">
+<meta property="og:updated_time" content="2017-07-28T13:25:51.993Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NAT相关">
+<meta name="twitter:description" content="NAT相关什么是NAT NAT（Network Address Translation），网络地址转换。是1994年提出的。当在专用网内部的一些主机本来已经分配到了本地IP地址（即仅在本专用网内使用的专用地址），但现在又想和因特网上的主机通信（并不需要加密）时，可使用NAT方法。。装有NAT软件的路由器叫做NAT路由器，它至少有一个有效的外部全球IP地址。这样，所有使用本地地址的主机在和外界通信时">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Librix的知识世界" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/wiki/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/wiki/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/wiki/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/wiki/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/wiki/css/style.css">
+    <script src="/wiki/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/wiki/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/wiki/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/wiki/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/wiki/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Librix的知识世界</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/wiki/">首页</a>
+                
+                    <a class="main-nav-link" href="/wiki/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/wiki/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/wiki/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/wiki/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/wiki/',
+        CONTENT_URL: '/wiki/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/wiki/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/wiki/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/wiki/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/wiki/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/wiki/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/wiki/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            uncategories
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/wiki/2017-07-28-NAT相关/">NAT相关</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            土木工程知识体系
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            专业软件
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/wiki/2017-05-28-PKPM怎么安装/">各种软件安装技能</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            土木工程施工
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/wiki/2017-05-30-土木工程施工/">《土木工程施工（第四版）》钟晖 读书笔记</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            结构力学
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/wiki/2017-06-03-结构力学不解的问题/">结构力学不解的问题</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/wiki/2017-05-26-00、土木工程的知识体系总论/">00、土木工程的知识体系总论</a></li>  <li class="file"><a href="/wiki/wiki/2017-06-13-抗震/">抗震</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            知识体系
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/wiki/2017-06-08-农业科学wiki/">农业科学wiki</a></li>  <li class="file"><a href="/wiki/wiki/2017-06-18-知识支柱/">知识支柱</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            考研资料
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            考研前的准备
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/wiki/2017-05-25-考研资料-2018考研指导/">考研数学-新东方直播-2018考研指导</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            读书笔记
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/wiki/2017-06-06-中国古代的物理学/">中国古代的力学与光学</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>recent</span></h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/wiki/2017-07-28-NAT相关/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/wiki/categories/uncategories/">uncategories</a></p>
+                            <p class="item-title"><a href="/wiki/wiki/2017-07-28-NAT相关/" class="title">NAT相关</a></p>
+                            <p class="item-date"><time datetime="2017-07-24T16:00:00.000Z" itemprop="datePublished">2017-07-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/wiki/2017-06-18-知识支柱/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/wiki/categories/知识体系/">知识体系</a></p>
+                            <p class="item-title"><a href="/wiki/wiki/2017-06-18-知识支柱/" class="title">知识支柱</a></p>
+                            <p class="item-date"><time datetime="2017-06-17T16:00:00.000Z" itemprop="datePublished">2017-06-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/wiki/2017-06-13-抗震/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/wiki/categories/土木工程知识体系/">土木工程知识体系</a></p>
+                            <p class="item-title"><a href="/wiki/wiki/2017-06-13-抗震/" class="title">抗震</a></p>
+                            <p class="item-date"><time datetime="2017-06-12T16:00:00.000Z" itemprop="datePublished">2017-06-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/wiki/2017-06-08-农业科学wiki/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/wiki/categories/知识体系/">知识体系</a></p>
+                            <p class="item-title"><a href="/wiki/wiki/2017-06-08-农业科学wiki/" class="title">农业科学wiki</a></p>
+                            <p class="item-date"><time datetime="2017-06-07T16:00:00.000Z" itemprop="datePublished">2017-06-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/wiki/2017-06-06-中国古代的物理学/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/wiki/categories/读书笔记/">读书笔记</a></p>
+                            <p class="item-title"><a href="/wiki/wiki/2017-06-06-中国古代的物理学/" class="title">中国古代的力学与光学</a></p>
+                            <p class="item-date"><time datetime="2017-06-05T16:00:00.000Z" itemprop="datePublished">2017-06-06</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>archives</span></h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/wiki/archives/2017/07/">July 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/wiki/archives/2017/06/">June 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/wiki/archives/2017/05/">May 2017</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>tags</span></h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/PKPM/">PKPM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/人类知识边界/">人类知识边界</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/体系/">体系</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/农业/">农业</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/土木/">土木</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/土木工程/">土木工程</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/抗震/">抗震</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/施工/">施工</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/物理/">物理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/知识/">知识</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/笔记/">笔记</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/结构力学/">结构力学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/考研/">考研</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/阅读/">阅读</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/wiki/tags/随笔/">随笔</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>tag cloud</span></h3>
+        <div class="widget tagcloud">
+            <a href="/wiki/tags/PKPM/" style="font-size: 10px;">PKPM</a> <a href="/wiki/tags/人类知识边界/" style="font-size: 10px;">人类知识边界</a> <a href="/wiki/tags/体系/" style="font-size: 10px;">体系</a> <a href="/wiki/tags/农业/" style="font-size: 10px;">农业</a> <a href="/wiki/tags/土木/" style="font-size: 10px;">土木</a> <a href="/wiki/tags/土木工程/" style="font-size: 20px;">土木工程</a> <a href="/wiki/tags/抗震/" style="font-size: 10px;">抗震</a> <a href="/wiki/tags/施工/" style="font-size: 10px;">施工</a> <a href="/wiki/tags/物理/" style="font-size: 10px;">物理</a> <a href="/wiki/tags/知识/" style="font-size: 10px;">知识</a> <a href="/wiki/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/wiki/tags/结构力学/" style="font-size: 10px;">结构力学</a> <a href="/wiki/tags/考研/" style="font-size: 10px;">考研</a> <a href="/wiki/tags/阅读/" style="font-size: 10px;">阅读</a> <a href="/wiki/tags/随笔/" style="font-size: 10px;">随笔</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title"><span>links</span></h3>
+        <div class="widget">
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-2017-07-28-NAT相关" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/wiki/categories/uncategories/">uncategories</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/wiki/tags/随笔/">随笔</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/wiki/2017-07-28-NAT相关/">
+            <time datetime="2017-07-24T16:00:00.000Z" itemprop="datePublished">2017-07-25</time>
+        </a>
+    </div>
+
+
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/librix/Wiki-site/raw/writing/source/_posts/2017-07-28-NAT相关.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/librix/Wiki-site/edit/writing/source/_posts/2017-07-28-NAT相关.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/librix/Wiki-site/commits/writing/source/_posts/2017-07-28-NAT相关.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            NAT相关
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="NAT相关"><a href="#NAT相关" class="headerlink" title="NAT相关"></a>NAT相关</h1><p>什么是NAT</p>
+<p>NAT（Network Address Translation），网络地址转换。是1994年提出的。当在专用网内部的一些主机本来已经分配到了本地IP地址（即仅在本专用网内使用的专用地址），但现在又想和因特网上的主机通信（并不需要加密）时，可使用NAT方法。<br>。装有NAT软件的路由器叫做NAT路由器，它至少有一个有效的外部全球IP地址。这样，所有使用本地地址的主机在和外界通信时，都要在NAT路由器上将其本地地址转换成全球IP地址，才能和因特网连接。<br>同样还有NAPT，网络地址、端口转换。现在一般穿透规则就是通过获取ip、端口来实现的，重点是实现穿透，所以以下统称NAT即可。</p>
+<p>为什么要穿透NAT</p>
+<p>NAT可以有效的减缓全球IP枯竭的问题。但是同时NAT也屏蔽了内部设备。</p>
+<p>比如在局域网A下有一个内网IP地址为192.168.1.155的设备A，现在一个设备B想要访问这个设备A，根据设备B所在网络可分为一下情况。</p>
+<p>设备B同在局域网A中：<br>设备B可直接通过设备内网ip 192.168.1.155 地址访问设备A；<br>设备B在外网：<br>设备B无法通过设备A内网访问设备A；<br>设备B在不同局域网A的局域网B中：<br>设备B在通过ip 192.168.1.155 访问的时候可能访问到局域网B下内网IP也为192.168.1.155的设备C，也可能找不到该ip，但是无法访问设备A。<br>这就是为什么在内网建立一个tcp或者udp服务，内网客户端可以通过ip和端口号直接通信，而外网却无法访问该内网建立的服务。<br>要实现p2p（Peer to Peer），首先我们的要知道客户端ip和端口号，但是通过局域网路由器的NAT转换，生成的外网ip和端口我们无法预知，这样我们就无法建立p2p连接。</p>
+<p>NAT转换</p>
+<p>如果你还是不明白NAT为什么屏蔽了内部设备，接下来举个NAT转换例子就明白了。<br>例：<br>内网机器A ip（192.168.1.188） 端口（9999） - 访问外网目标主机B ip（220.233.28.42） 端口（8888）：</p>
+<p>1.数据包</p>
+<p>目的主机：220.233.28.42<br>目的端口：8888</p>
+<p>源主机：192.168.1.188<br>源端口：9999 （用户自定义或随机）</p>
+<p>2.地址转换</p>
+<p>目的主机：220.233.28.42<br>目的端口：8888</p>
+<p>源主机：123.206.41.242 （NAT转换，为路由器外网ip）<br>源端口：17309 （NAT转换）</p>
+<p>3.记录地址映射</p>
+<p>192.168.1.188：9999 —- 123.206.41.242：17309</p>
+<p>4.外网主机B向内网主机A返回响应消息</p>
+<p>目的主机：123.206.41.242<br>目的端口：17309</p>
+<p>源主机：220.233.28.42<br>源端口：8888</p>
+<p>5.NAT查找地址映像并转换</p>
+<p>目的主机：192.168.1.188<br>目的端口：9999</p>
+<p>源主机：220.233.28.42<br>源端口：8888</p>
+<p>通过地址转换，主机A的内网地址被映射之后我们是无法预知的，而且我们无法通过主机A的内网地址直接访问A，所以NAT屏蔽了主机A。</p>
+<p>通过例子可以看到，当主机A访问外网主机B时，通过NAT随机分配一个（外网ip为路由器外网ip）端口，这样就把内网地址映射成了一个唯一的外网地址。然后外网主机B响应主机A时，主机B不直接访问主机A，而是通过NAT转换后的地址访问路由器，路由器就会通过映射把数据分配给内网主机A。这也就是NAT穿透的原理。</p>
+<p>NAT穿透原理</p>
+<p>通过双方所在网络环境不同可分为一下模式：</p>
+<p>一个在局域网，另一个在外网<br>都在不同的局域网<br>都在相同的局域网<br>上一章节已经提到了一种穿透方式，即：局域网-外网的访问模式，因为主机B在外网，ip端口确定，主机A可以直接通过B的外网地址访问B，外网主机B首先接受到了主机A的数据包，便可以知道主机A经过NAT转化后的外网地址，然后就可以进行相互通信。<br>但是如果双方都在不同的局域网，互相都不知道自己的外网地址怎么办。<br>这种情况就需要利用一个拥有唯一IP的中间服务器S，因为S ip固定并且已知，就让两个设备都向S发送数据包，S就可以的知道两个设备的公网ip，在设备p2p通信之前先去服务器查找对方的ip、端口，就可以实现通信。<br>两个设备同时处在同一个局域网下，可以不通过NAT，直接用内网ip进行通信，这是最节省带宽的方式。当然，也可以通过第二种，通过S服务器来得到外网ip端口，这种情况外网的IP是相同的(同一个路由器)，只是分配的端口不同。</p>
+<p>发送数据的方式利用UDP，虽然UDP不可靠，但是UDP可以轻松实现穿透。通过浏览各大博客，都没有找到通过TCP实现穿透的项目，甚至有人说TCP几乎不可能实现穿透（博主初学，还望指点）。</p>
+<p>使用过UDP的肯定知道，首先创建一个UDP监听端口，然后可以通过这个端口发送和接收数据包。NAT会把这个监听端口映射为外网ip和端口。我们只需要通过端口发送数据包给服务器就可以让服务器拿到这个端口信息，然后可以让其他客户机通过这个端口的信息来发送数据给该端口。</p>
+<p>在这里NAPT对UDP的端口映射（session）还有一定的规则：</p>
+<p>A.源地址（内网ip）不相同，忽略其他因素，则session不同。<br>B.源地址相同，源端口不同，忽略其他因素，则session不同。<br>C.源地址相同，源端口相同，目标地址不同，对于不同的NAPT，session可能不同。（一般大部分是相同的，不同的无法进行穿透）<br>D.源地址相同，源端口相同，目标地址相同，任何端口，session一定相同。<br>session并不是长期存在的，不同的路由器session储存时间不同，短的有的几十秒，长的可能有的几分种。要想维持这个session可以通过心跳包来维持，比如10秒向服务器发送一个心跳包。并且对于上面第三种情况，如果最后session不同，就无法实现穿透（这种类型一般少见）。</p>
+<p>NAT穿透UDP具体实现</p>
+<p>本来是打算把我的java代码黏贴出来的，后来想了想，我写的只是其中一种实现方式，不同语言也有不同的实现方式，我就来说说实现的步骤，就不再写代码了。也挺简单的。</p>
+<p>客户端建立一个UDP监听端口<br>客户端做一个心跳包向服务器发送数据包<br>服务器接收到心跳包后，储存客户端的ip、端口信息<br>当客户端要进行p2p通信的时候</p>
+<p>发送方服务器查询接收方ip、端口<br>数据包定向ip、端口发送数据包<br>完成通信<br>注意 重点</p>
+<p>到此，你以为结束了？ 那就大错特错了。<br>到这里你会发现，接收方（以下统称A）可能拿不到数据包，这种情况出现在接收方在局域网内（需要穿透NAT）。<br>前面讲的，并不是仅仅获取到设备外网地址就可以成功穿透，还要注意NAT会把不认识的数据丢弃。<br>这是为什么？<br>NAT丢弃了你这个来源不明的包，根本没有分发给接收设备A。<br>为什么叫来源不明呢，这是因为首先A的UDP端口给服务器发数据包，A的NAT创建了一个session，这样A再接收到服务器的数据时，会查找这个映射（A&lt;—&gt;服务器），这个映射就储存在这个session里。但是发送方（B）向A的NAT发送数据（这是在B的NAT建立对A的映射），没有指向B的映射，所以数据包被A的NAT丢弃。<br>那怎么解决呢，其实让A也向B发一个数据包就好了，这样A的NAT会建立一个对B的session，这样再收到B的数据NAT就可以查找到对应的映射了。</p>
+<p>之前提到的NAPT对UDP的session映射，源地址相同，源端口相同，目标地址不同，对于不同的NAPT，session可能不同。这条规则是依据不同的NAT的。Symmetric NAPT会导致session不同，Cone NAPT则是相同的。对于p2p只要一方使用的是Symmetric NAPT就会导致无法穿透。具体可自行百度。</p>
+<p>作者：贼厉害<br>链接：<a href="http://www.jianshu.com/p/3d64be31857e" rel="external nofollow noopener noreferrer" target="_blank">http://www.jianshu.com/p/3d64be31857e</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h1 id="从Internet访问没有外网ip的NAS服务器的解决办法"><a href="#从Internet访问没有外网ip的NAS服务器的解决办法" class="headerlink" title="从Internet访问没有外网ip的NAS服务器的解决办法"></a>从Internet访问没有外网ip的NAS服务器的解决办法</h1><p>ssh的反向端口转发（reverse port forwarding）功能，这是常被忽略但是非常强大的一个用途。原理是在本地机器的端口和远程机器的端口建立映射关系，这样访问远程机器指定端口时，所有请求都会被加密并传输到本地机器的端口上，本地机器响应后将结果在转发回远程机器的端口，整个过程看起来就像远程机器做出响应一样，强大之处是远程机器可以直接绕过防火墙和各种NAT转发，准确找到你的内网机器。<br>　　具体做法很简单，只需要一个命令：<br>　　ssh -NfR <remote port="">:localhost:<local port=""> remoteuser@remoteserver<br>　　其中remote port是要接受请求的远程机器端口，local port是要做出响应的本地机器的端口， remoteserver是远程机器的地址，remoteuser是负责转发的具体用户。比如家里的NAS端口是8080，你的vps外网地址1.2.3.4，那么可以通过在你的NAS上执行ssh –NfR 8888:localhost:8080 user1@1.2.3.4命令后，访问vps的8888端口来访问家里的NAS机器了。<br>　　几个需要注意的问题：1. 需要设置远程机器ssh配置文件中的GatewayPorts参数来达到允许任意地址机器来使用这个转发规则的目的，  否则上述命令只允许在远程机器本机上的请求通过，centos上操作见此；2. 该命令执行后，如果一段时间内没有请求被转发，则ssh反向连接会自动断开，这时候就需要autossh之类的工具来维持这个连接（实时监测，断开后自动重连），具体使用方法可以搜到很多例子；3. ssh通过autossh自动重连时不可能每次都手动输入用户密码，所以需要改用key authentication的方式连接（将本地机器的用户公钥添加到远程机器用户的~/.ssh/authorized_keys文件中）。<br>　　虽然鹏博士的实际出口网速很慢，但在大局域网下迅雷下载能满10M/s，可在线看1080p视频，性价比还是挺高的，明年不用换高价的宽带了。。。<br>　　PS: 此方法可用于其他场景，比如回家后远程访问公司机器上的资料，给外网客户演示公司内网机器上的demo等。</local></remote></p>
+<p>作者：菩提老王<br>链接：<a href="https://blog.newnaw.com/?p=1278" rel="external nofollow noopener noreferrer" target="_blank">https://blog.newnaw.com/?p=1278</a></p>
+
+            </div>
+        
+
+        <footer class="article-footer">
+
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+    
+        <a href="/wiki/wiki/2017-06-18-知识支柱/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">知识支柱</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>
+
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Librix | 张立根 &copy; 2017 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme by <a href="https://github.com/zthxxx" rel="external nofollow noopener noreferrer" target="_blank">zthxxx</a>
+        </div>
+    </div>
+</footer>
+        
+
+    
+        <script src="/wiki/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/wiki/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/wiki/js/main.js"></script>
+
+    </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
